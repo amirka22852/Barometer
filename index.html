@@ -1,0 +1,1577 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Барометр рынка</title>
+<meta name="description" content="Покупать или продавать: шансы по статистике, готовый ордер и новостной фон">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Барометр">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#ECF0EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D1412" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Unbounded:wght@500;700&display=swap">
+<style>
+/* Layout: приборный стол — слева список активов, справа «показания» выбранного; на телефоне всё в одну колонку */
+:root {
+  --bg: #ECF0EE;
+  --surface: #FFFFFF;
+  --sunk: #F3F6F4;
+  --ink: #15211D;
+  --muted: #56665F;
+  --faint: #86948F;
+  --line: #D5DEDA;
+  --accent: #946312;
+  --accent-soft: #F2E6CE;
+  --on-accent: #FFFFFF;
+  --buy: #18774F;
+  --buy-soft: #DCEFE4;
+  --sell: #B03B2C;
+  --sell-soft: #F6E0DA;
+  --wait: #4A5D6C;
+  --wait-soft: #E1E8ED;
+  --na: #6F6C74;
+  --na-soft: #EAE8EC;
+  --s200: #5A7F9C;
+  --shadow: 0 1px 2px rgba(21, 33, 29, .05), 0 6px 20px rgba(21, 33, 29, .05);
+  --f-display: "Unbounded", "Golos Text", system-ui, sans-serif;
+  --f-body: "Golos Text", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --r: 14px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0D1412; --surface: #141D1A; --sunk: #111916; --ink: #E3EBE7; --muted: #9DAEA8; --faint: #6F807A;
+    --line: #26332F; --accent: #E2B25E; --accent-soft: #3A2E17; --on-accent: #1B1406;
+    --buy: #55C590; --buy-soft: #14301F; --sell: #F2826E; --sell-soft: #3B1D18; --wait: #A8BBC9; --wait-soft: #1D2A31;
+    --na: #ABA8B0; --na-soft: #26242A; --s200: #88AAC5; --shadow: 0 1px 2px rgba(0, 0, 0, .35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0D1412; --surface: #141D1A; --sunk: #111916; --ink: #E3EBE7; --muted: #9DAEA8; --faint: #6F807A;
+  --line: #26332F; --accent: #E2B25E; --accent-soft: #3A2E17; --on-accent: #1B1406;
+  --buy: #55C590; --buy-soft: #14301F; --sell: #F2826E; --sell-soft: #3B1D18; --wait: #A8BBC9; --wait-soft: #1D2A31;
+  --na: #ABA8B0; --na-soft: #26242A; --s200: #88AAC5; --shadow: 0 1px 2px rgba(0, 0, 0, .35);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--f-body); font-size: 15px; line-height: 1.5;
+}
+button, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+
+.app {
+  max-width: 1260px; margin: 0 auto;
+  padding-block: 22px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 18px;
+}
+
+/* Шапка */
+.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 14px 24px; }
+.brand h1 {
+  margin: 0; font-family: var(--f-display); font-weight: 700; letter-spacing: -.01em;
+  font-size: clamp(24px, 3.4vw, 34px); line-height: 1.05; text-wrap: balance;
+}
+.brand p { margin: 6px 0 0; color: var(--muted); }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; }
+.seg { display: inline-flex; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+.seg button {
+  border: 0; background: transparent; padding: 7px 13px; border-radius: 999px; cursor: pointer;
+  color: var(--muted); font-weight: 500; white-space: nowrap;
+}
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; cursor: pointer;
+  padding: 9px 16px; border: 1px solid transparent; font-weight: 600;
+  background: var(--accent); color: var(--on-accent);
+}
+.btn:disabled { opacity: .6; cursor: progress; }
+.btn svg { width: 16px; height: 16px; }
+.btn.busy svg { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.side { display: grid; gap: 8px; justify-items: end; }
+.status { text-align: right; color: var(--muted); font-size: 13px; }
+@media (max-width: 720px) { .side { justify-items: start; } .status { text-align: left; } }
+
+.note {
+  background: var(--accent-soft); border-radius: var(--r); padding: 12px 16px;
+  display: grid; gap: 6px;
+}
+.note summary { cursor: pointer; font-weight: 500; list-style: none; }
+.note summary::-webkit-details-marker { display: none; }
+.note summary::after { content: " Почему так →"; color: var(--accent); font-weight: 600; }
+.note[open] summary::after { content: " Свернуть"; }
+.note p { margin: 4px 0 0; max-width: 78ch; }
+
+/* Сетка */
+.grid { display: grid; grid-template-columns: minmax(290px, 370px) minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 920px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+
+.panel { background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); }
+
+/* Список */
+.rail { padding: 16px; display: grid; gap: 12px; position: sticky; top: 12px; }
+@media (max-width: 920px) { .rail { position: static; } }
+.rail h2 { margin: 0; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 600; }
+.tally { display: flex; flex-wrap: wrap; gap: 6px; }
+.add { display: flex; gap: 8px; }
+.add input {
+  flex: 1; min-width: 0; padding: 9px 12px; border-radius: 10px; border: 1px solid var(--line);
+  background: var(--sunk);
+}
+.add button { border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 9px 14px; cursor: pointer; font-weight: 600; }
+.add-msg { margin: -4px 0 0; font-size: 13px; color: var(--sell); }
+.add-msg:empty { display: none; }
+.list { display: grid; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.item { position: relative; }
+.row {
+  width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; align-items: center;
+  text-align: left; border: 1px solid transparent; background: transparent; border-radius: 12px;
+  padding: 10px 34px 10px 12px; cursor: pointer;
+}
+.row:hover { background: var(--sunk); }
+.row[aria-current="true"] { background: var(--sunk); border-color: var(--line); }
+.row-name b { font-weight: 600; }
+.row-name small, .row-price small { display: block; color: var(--muted); font-size: 12.5px; }
+.row-name small { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row-price { text-align: right; }
+.row-foot { grid-column: 1 / -1; display: flex; align-items: center; gap: 8px; margin-top: 4px; font-size: 12.5px; color: var(--muted); }
+.row-foot .num { color: var(--ink); }
+.rm {
+  position: absolute; top: 8px; right: 6px; width: 26px; height: 26px; border-radius: 8px;
+  border: 0; background: transparent; color: var(--faint); cursor: pointer; font-size: 16px; line-height: 1;
+}
+.rm:hover { color: var(--sell); background: var(--sell-soft); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 2px 9px; border-radius: 999px;
+  font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap;
+}
+.v-BUY { color: var(--buy); background: var(--buy-soft); }
+.v-SELL { color: var(--sell); background: var(--sell-soft); }
+.v-WAIT { color: var(--wait); background: var(--wait-soft); }
+.v-NA, .v-PEG, .v-ERR, .v-LOAD { color: var(--na); background: var(--na-soft); }
+.up { color: var(--buy) !important; }
+.down { color: var(--sell) !important; }
+
+/* Показания */
+.reading { padding: clamp(16px, 2.6vw, 28px); display: grid; gap: 22px; min-width: 0; }
+.r-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 14px 20px; }
+.r-title h2 { margin: 0; font-size: clamp(20px, 2.4vw, 26px); font-weight: 600; line-height: 1.2; text-wrap: balance; }
+.r-title h2 span { color: var(--muted); font-weight: 400; font-size: .7em; margin-left: 6px; }
+.r-price { margin-top: 6px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.r-price .num { font-size: clamp(24px, 3vw, 32px); font-weight: 500; }
+.r-price small { color: var(--muted); }
+.stamp {
+  font-family: var(--f-display); font-weight: 700; font-size: clamp(22px, 3vw, 30px); letter-spacing: .03em;
+  line-height: 1; padding: 12px 18px 11px; border-radius: 12px; border: 2px solid currentColor;
+  display: grid; justify-items: end; gap: 6px;
+}
+.stamp small { font-family: var(--f-body); font-weight: 600; font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; }
+.summary { margin: -6px 0 0; font-size: 16.5px; max-width: 70ch; text-wrap: pretty; }
+.callout { border-left: 3px solid var(--accent); padding: 4px 0 4px 14px; color: var(--ink); max-width: 72ch; }
+
+.section-title { margin: 0 0 10px; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 600; }
+
+/* Шкала вероятности */
+.strips { display: grid; gap: 16px; }
+.strip-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.strip-head span { color: var(--muted); }
+.strip-head b { font-family: var(--f-mono); font-size: 22px; font-weight: 500; }
+.track { position: relative; height: 14px; margin-top: 8px; background: var(--sunk); border-radius: 999px; border: 1px solid var(--line); }
+.track .ci { position: absolute; top: 2px; bottom: 2px; border-radius: 999px; opacity: .28; }
+.track .dot { position: absolute; top: 50%; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; border: 3px solid var(--surface); box-shadow: 0 0 0 1px var(--line); }
+.track .mk { position: absolute; top: -5px; bottom: -5px; width: 0; margin-left: -1px; }
+.mk.base { border-left: 2px solid var(--faint); }
+.mk.be { border-left: 2px dashed var(--ink); }
+.mk.thr { border-left: 2px solid var(--accent); }
+.L .ci, .L .dot { background: var(--buy); }
+.S .ci, .S .dot { background: var(--sell); }
+.scale { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--faint); margin-top: 4px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--muted); }
+.legend i { display: inline-block; width: 14px; height: 0; vertical-align: middle; margin-right: 6px; }
+.legend .lg-ci { height: 8px; border-radius: 4px; background: var(--faint); opacity: .45; }
+.legend .lg-base { border-top: 2px solid var(--faint); }
+.legend .lg-be { border-top: 2px dashed var(--ink); }
+.legend .lg-thr { border-top: 2px solid var(--accent); }
+.gap { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
+
+/* График */
+.chart-wrap { min-width: 0; }
+.chart { width: 100%; height: 240px; display: block; }
+.chart text { font-family: var(--f-mono); font-size: 11px; fill: var(--muted); }
+.chart .grid-l { stroke: var(--line); stroke-width: 1; }
+.chart .zone { fill: var(--sunk); }
+.chart .zone-edge { stroke: var(--line); stroke-dasharray: 3 3; }
+.chart .area { fill: var(--ink); opacity: .05; }
+.chart .pl { fill: none; stroke: var(--ink); stroke-width: 1.7; stroke-linejoin: round; }
+.chart .s50 { fill: none; stroke: var(--accent); stroke-width: 1.3; }
+.chart .s200 { fill: none; stroke: var(--s200); stroke-width: 1.3; }
+.chart .tgt { stroke: var(--buy); stroke-width: 1.6; stroke-dasharray: 5 4; }
+.chart .stp { stroke: var(--sell); stroke-width: 1.6; stroke-dasharray: 5 4; }
+.chart .tag-bg { fill: var(--surface); stroke: var(--line); }
+.chart .t-buy { fill: var(--buy); font-weight: 500; }
+.chart .t-sell { fill: var(--sell); font-weight: 500; }
+.chart .t-ink { fill: var(--ink); font-weight: 500; }
+.chart .last { fill: var(--ink); stroke: var(--surface); stroke-width: 2; }
+.chart-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--muted); margin-top: 6px; }
+.chart-legend i { display: inline-block; width: 16px; vertical-align: middle; margin-right: 6px; border-top: 2px solid; }
+
+/* Почему + план */
+.cols { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 22px; align-items: start; }
+@media (max-width: 760px) { .cols { grid-template-columns: minmax(0, 1fr); } }
+.why { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.why li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; }
+.why li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; margin: 8px 0 0 6px; background: var(--faint); }
+.why li.pos::before { background: var(--buy); }
+.why li.neg::before { background: var(--sell); }
+.why li.info::before { background: var(--accent); }
+.plan { background: var(--sunk); border-radius: 12px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; }
+.plan dl { margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 14px; }
+.plan dt { color: var(--muted); }
+.plan dd { margin: 0; text-align: right; }
+.plan p { margin: 0; font-size: 13.5px; color: var(--muted); }
+
+/* Доверие */
+.trust { border-top: 1px solid var(--line); padding-top: 18px; display: grid; gap: 12px; }
+.trust-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px 26px; }
+@media (max-width: 760px) { .trust-grid { grid-template-columns: minmax(0, 1fr); } }
+.skill { font-size: 17px; font-weight: 600; }
+.skill.good { color: var(--buy); }
+.skill.bad { color: var(--sell); }
+.muted { color: var(--muted); }
+.small { font-size: 13.5px; }
+.calib { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.calib th { text-align: left; font-weight: 500; color: var(--muted); padding: 0 0 6px; }
+.calib td { padding: 5px 0; border-top: 1px solid var(--line); vertical-align: middle; }
+.calib td:first-child { white-space: nowrap; padding-right: 10px; }
+.calib-note { margin: 6px 0 0; font-size: 12.5px; color: var(--muted); }
+.calib td.num { text-align: right; padding-left: 10px; }
+.bar { position: relative; height: 8px; background: var(--sunk); border-radius: 4px; min-width: 70px; }
+.bar span { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: var(--wait); }
+.bar em { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--accent); }
+.facts { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.facts li { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); padding-top: 8px; }
+.facts li span:first-child { color: var(--muted); }
+
+.method { font-size: 14px; }
+.method summary { cursor: pointer; font-weight: 600; }
+.method ul { margin: 10px 0 0; padding-left: 18px; display: grid; gap: 6px; max-width: 80ch; }
+.foot { color: var(--muted); font-size: 13px; text-align: center; }
+
+.empty { padding: 40px 20px; text-align: center; color: var(--muted); }
+.skel { height: 14px; border-radius: 6px; background: var(--sunk); }
+@media (prefers-reduced-motion: reduce) { .btn.busy svg { animation: none; } * { transition: none !important; } }
+
+/* Колонка плана и плеча */
+.side-col { display: grid; gap: 14px; align-content: start; min-width: 0; }
+.lev-inputs { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; align-items: end; }
+.lev-inputs label { display: grid; gap: 4px; font-size: 12.5px; color: var(--muted); }
+.lev-inputs input {
+  width: 100%; padding: 8px 10px; border-radius: 9px; border: 1px solid var(--line); background: var(--surface);
+  font-family: var(--f-mono); font-size: 15px;
+}
+.plan .warn { color: var(--sell); font-weight: 500; }
+.rail h2 + .tally { margin-top: -4px; }
+
+/* Направление: сильный и слабый сигнал */
+.chip.strong.v-BUY { background: var(--buy); color: var(--surface); }
+.chip.strong.v-SELL { background: var(--sell); color: var(--surface); }
+.chip.weak { background: transparent; box-shadow: inset 0 0 0 1px currentColor; }
+.sig { font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.stamp.weak { border-style: dashed; }
+.stamp.strong.v-BUY { background: var(--buy); color: var(--surface); border-color: var(--buy); }
+.stamp.strong.v-SELL { background: var(--sell); color: var(--surface); border-color: var(--sell); }
+.stamp small + small { margin-top: -2px; opacity: .85; }
+
+/* Карточка ордера */
+.ticket { border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 12px; background: var(--sunk); }
+.t-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.t-head .section-title { margin: 0; }
+.t-inputs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; align-items: end; }
+.t-inputs label { display: grid; gap: 4px; font-size: 12.5px; color: var(--muted); }
+.t-inputs input { width: 100%; padding: 8px 10px; border-radius: 9px; border: 1px solid var(--line); background: var(--surface); font-family: var(--f-mono); font-size: 15px; }
+@media (max-width: 520px) { .t-inputs { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .t-inputs label:first-child { grid-column: 1 / -1; } }
+.t-grid { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 26px; }
+@media (max-width: 760px) { .t-grid { grid-template-columns: minmax(0, 1fr); } }
+.t-row { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 10px; padding: 7px 0; border-top: 1px solid var(--line); min-width: 0; }
+.t-row dt { color: var(--muted); white-space: nowrap; }
+.t-row dd .num { overflow-wrap: anywhere; }
+.t-row dd { margin: 0; display: flex; align-items: center; gap: 8px; justify-content: flex-end; text-align: right; min-width: 0; }
+.t-row.t-buy .num { color: var(--buy); }
+.t-row.t-sell .num { color: var(--sell); }
+.copy {
+  flex: none; display: inline-grid; place-items: center; min-width: 30px; height: 28px; padding: 0 6px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--muted); border-radius: 7px;
+  font-size: 12px; cursor: pointer; white-space: nowrap;
+}
+.copy:hover { color: var(--ink); border-color: var(--faint); }
+.copy.done { color: var(--buy); border-color: var(--buy); }
+.t-warns { display: grid; gap: 6px; }
+.t-warns p { margin: 0; padding: 8px 12px; border-radius: 9px; background: var(--sell-soft); color: var(--sell); font-weight: 500; font-size: 14px; }
+
+/* Новости */
+.news #news { display: grid; gap: 12px; }
+.mini-title { margin: 0 0 6px; font-size: 13px; font-weight: 600; color: var(--muted); }
+.heads { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.heads li { display: grid; gap: 2px; }
+.heads a { color: var(--ink); text-decoration: none; font-weight: 500; }
+.heads a:hover { text-decoration: underline; }
+.heads small { color: var(--muted); font-size: 12.5px; }
+.flag { display: inline-block; margin-right: 8px; padding: 0 7px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; vertical-align: 1px; }
+.flag.risk { color: var(--sell); background: var(--sell-soft); }
+.flag.good { color: var(--buy); background: var(--buy-soft); }
+.news a { color: var(--accent); }
+.facts.mood li span:last-child { text-align: right; }
+
+/* Телефон: список и монета — отдельные экраны, крупные кнопки */
+.m-back {
+  display: none; align-items: center; gap: 4px; margin: -4px 0 -6px -6px; padding: 8px 10px 8px 4px;
+  border: 0; background: transparent; color: var(--accent); font-weight: 600; cursor: pointer; justify-self: start;
+}
+.app { padding-top: max(22px, calc(env(safe-area-inset-top, 0px) + 10px)); padding-bottom: max(48px, calc(env(safe-area-inset-bottom, 0px) + 24px)); }
+@media (max-width: 920px) {
+  body.m-detail .rail { display: none; }
+  body:not(.m-detail) .reading { display: none; }
+  body.m-detail .note { display: none; }
+  .m-back { display: inline-flex; }
+  .seg button { padding: 9px 14px; }
+  .rm { width: 36px; height: 36px; top: 4px; right: 2px; font-size: 18px; }
+  .row { padding-right: 40px; }
+  .copy { min-width: 40px; height: 34px; }
+  .t-inputs input { padding: 10px; font-size: 16px; }
+  .add input { font-size: 16px; padding: 11px 12px; }
+  .add button { padding: 11px 14px; }
+}
+@media (max-width: 600px) {
+  .brand p { display: none; }
+  .brand h1 { font-size: 24px; }
+  .top { gap: 10px; }
+  .controls { gap: 8px; }
+  .side { width: 100%; }
+  .seg { flex: none; }
+  .btn { padding: 9px 13px; }
+  .reading { padding: 14px; gap: 18px; }
+  .stamp { width: 100%; justify-items: start; }
+}
+
+@media (max-width: 600px) {
+  .controls { width: 100%; }
+  #mode { order: 1; }
+  #refresh { order: 2; margin-left: auto; }
+  #horizon { order: 3; width: 100%; }
+  #horizon button { flex: 1; padding-left: 6px; padding-right: 6px; }
+  #refresh-label { display: none; }
+  #refresh svg { width: 18px; height: 18px; }
+  .status { font-size: 12.5px; }
+}
+
+.rail, .reading { grid-template-columns: minmax(0, 1fr); }
+
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <h1>Барометр рынка</h1>
+      <p>Покупать или продавать — и с какой вероятностью сделка закроется в плюс</p>
+    </div>
+    <div class="side">
+      <div class="controls">
+        <div class="seg" id="mode" role="group" aria-label="Свечи"></div>
+        <div class="seg" id="horizon" role="group" aria-label="Срок сделки"></div>
+        <button class="btn" id="refresh" type="button" aria-label="Обновить данные">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+          <span id="refresh-label">Обновить</span>
+        </button>
+      </div>
+      <div class="status" id="status" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <details class="note">
+    <summary>Направление показывается всегда, но рядом всегда честный шанс и сколько нужно для безубытка.</summary>
+    <p>«Покупать» или «Продавать» — это сторона, где шансы лучше. «Сильный сигнал» бывает, только если модель на этой монете уже доказала, что угадывает лучше простой статистики, и даже осторожная нижняя граница шанса выше безубытка. Всё остальное — слабый сигнал: направление есть, но преимущества по статистике нет.</p>
+    <p>Цель и стоп стоят на одинаковом расстоянии от цены, поэтому подброшенная монетка дала бы около 50%. На часовых свечах добавляется комиссия: за вход и выход она съедает заметную часть движения, и безубыток там часто требует 55–60% удачных сделок.</p>
+    <p>80% легко «нарисовать»: взять цель +1% и стоп −10%. Такая сделка будет удаваться часто, но в среднем приносить убыток. Поэтому смотри на шанс вместе с безубытком.</p>
+  </details>
+
+  <main class="grid">
+    <aside class="rail panel" aria-label="Мой список">
+      <h2>Проверить монету</h2>
+      <form class="add" id="add" autocomplete="off">
+        <input id="add-input" name="asset" placeholder="PEPE, SOL, ETH/BTC…" aria-label="Монета или валютная пара" autocapitalize="characters">
+        <button type="submit">Проверить</button>
+      </form>
+      <p class="add-msg" id="add-msg" role="alert"></p>
+      <h2>Мой список</h2>
+      <div class="tally" id="tally"></div>
+      <ul class="list" id="list"></ul>
+    </aside>
+    <article class="reading panel" id="detail"></article>
+  </main>
+
+  <details class="method panel" style="padding:16px 20px">
+    <summary>Как это считается</summary>
+    <ul>
+      <li>Данные: свечи Binance — дневные (до 3000 дней) или часовые (последние 5000 часов, около 7 месяцев). Цена в карточке ордера обновляется каждые 5 секунд. Для валют есть только дневные курсы ЕЦБ с 2012 года.</li>
+      <li>Состояние рынка на каждой свече описывают три признака: тренд (цена и средние за 50 и 200 свечей), RSI(14) (ниже 35, от 35 до 65, выше 65) и волатильность (выше или ниже своей медианы за последние 250 свечей). Всего 18 сочетаний.</li>
+      <li>Сделка: тейк и стоп на расстоянии обычного размаха цены за срок (σ за 20 свечей × √срока). Если за срок не сработало ни то, ни другое, выход по рынку. Если в одной свече задеты и тейк, и стоп, считается, что сработал стоп.</li>
+      <li>Комиссия: 0,11% за сделку для крипты (тейкер Bybit на фьючерсах, 0,055% за вход и столько же за выход) и 0,05% для валют. Плата за удержание позиции (funding) не учтена.</li>
+      <li>Шанс: доля сделок, закрывшихся в плюс, в прошлые свечи с тем же сочетанием. Похожие свечи идут подряд и не независимы, поэтому считается число независимых эпизодов, а оценка сжимается к общей частоте, как будто добавлено 30 средних наблюдений. Разброс — 95% интервал.</li>
+      <li>Направление: «Покупать», если у покупки шанс сильнее превышает безубыток (или меньше до него не дотягивает), иначе «Продавать». Сильный сигнал — только если нижняя граница шанса выше безубытка, средний итог положительный и модель на этой монете точнее простой частоты.</li>
+      <li>Проверка: за последние 730 дней или 2000 часов прогноз строился на каждую свечу только по тому, что было известно к этому моменту, и сравнивался с реальностью. Если модель не была точнее общей частоты, показывается общая частота.</li>
+      <li>Ордер: сумма считается так, чтобы стоп стоил выбранный процент депозита. Ликвидация оценивается как 1/плечо минус 0,5% поддерживающей маржи; точное значение зависит от биржи и размера позиции. Для монет вроде PEPE, BONK, SHIB, FLOKI фьючерс на Bybit считается в тысячах монет.</li>
+      <li>Новости: индекс страха и жадности (alternative.me), тренды CoinGecko и заголовки мировой прессы за 3 дня (GDELT). В расчёт шанса они не входят, это предупреждение о событиях, которых не видит статистика.</li>
+      <li>Чего модель не знает: решения регуляторов, листинги и делистинги, взломы, крупные продажи — если о них ещё не написали. Новые монеты, у которых меньше ~260 свечей истории, не оцениваются.</li>
+      <li>Всё считается прямо в браузере. Наружу уходят только запросы цен и новостей.</li>
+    </ul>
+  </details>
+  <p class="foot">Это статистика по прошлым ценам, а не гарантия и не индивидуальная рекомендация. Решение и риск — твои.</p>
+</div>
+<script>
+/* Барометр — расчётное ядро. Чистые функции, без DOM.
+   Модель: исторические аналоги по состоянию рынка (тренд × RSI × волатильность),
+   план «цель/стоп» шириной K·σ·√H, сжатие к базовой частоте, проверка шаг за шагом. */
+const Engine = (() => {
+  const K = 1.0;          // ширина цели и стопа в сигмах за горизонт
+  const PRIOR_M = 30;     // сила сжатия к базовой частоте (псевдонаблюдения)
+  const MED_WIN = 250, MED_MIN = 120;
+  const MIN_BASE = 50, MIN_NEFF = 15;
+  const MMR = 0.005;       // поддерживающая маржа для оценки ликвидации
+
+  const nanArr = (n) => new Float64Array(n).fill(NaN);
+
+  function sma(c, n) {
+    const L = c.length, out = nanArr(L), cs = new Float64Array(L + 1);
+    for (let k = 0; k < L; k++) cs[k + 1] = cs[k] + c[k];
+    for (let i = n - 1; i < L; i++) out[i] = (cs[i + 1] - cs[i + 1 - n]) / n;
+    return out;
+  }
+
+  function rsi(c, n = 14) {
+    const L = c.length, out = nanArr(L);
+    if (L - 1 < n) return out;
+    let ag = 0, al = 0;
+    for (let k = 0; k < n; k++) { const d = c[k + 1] - c[k]; if (d > 0) ag += d; else if (d < 0) al -= d; }
+    ag /= n; al /= n;
+    out[n] = al > 0 ? 100 - 100 / (1 + ag / al) : 100;
+    for (let i = n + 1; i < L; i++) {
+      const d = c[i] - c[i - 1];
+      ag = (ag * (n - 1) + (d > 0 ? d : 0)) / n;
+      al = (al * (n - 1) + (d < 0 ? -d : 0)) / n;
+      out[i] = al > 0 ? 100 - 100 / (1 + ag / al) : 100;
+    }
+    return out;
+  }
+
+  function sigma20(c) {
+    const L = c.length, out = nanArr(L), lr = new Float64Array(Math.max(0, L - 1));
+    for (let k = 0; k < L - 1; k++) lr[k] = Math.log(c[k + 1] / c[k]);
+    for (let i = 20; i < L; i++) {
+      let m = 0; for (let k = i - 20; k < i; k++) m += lr[k]; m /= 20;
+      let v = 0; for (let k = i - 20; k < i; k++) v += (lr[k] - m) ** 2;
+      out[i] = Math.sqrt(v / 19);
+    }
+    return out;
+  }
+
+  function median(a) {
+    const s = Array.from(a).sort((x, y) => x - y), n = s.length, h = n >> 1;
+    return n % 2 ? s[h] : (s[h - 1] + s[h]) / 2;
+  }
+
+  function features(c) {
+    const L = c.length;
+    const s50 = sma(c, 50), s200 = sma(c, 200), r = rsi(c), sg = sigma20(c), med = nanArr(L);
+    for (let i = 0; i < L; i++) {
+      const w = [];
+      for (let k = Math.max(0, i - MED_WIN + 1); k <= i; k++) if (!Number.isNaN(sg[k])) w.push(sg[k]);
+      if (w.length >= MED_MIN) med[i] = median(w);
+    }
+    const state = new Int16Array(L).fill(-1), T = new Int8Array(L), R = new Int8Array(L), V = new Int8Array(L);
+    for (let i = 0; i < L; i++) {
+      T[i] = (c[i] > s200[i] && s50[i] > s200[i]) ? 2 : (c[i] < s200[i] && s50[i] < s200[i]) ? 0 : 1;
+      R[i] = r[i] < 35 ? 0 : r[i] > 65 ? 2 : 1;
+      V[i] = sg[i] > med[i] ? 1 : 0;
+      const ok = !(Number.isNaN(s200[i]) || Number.isNaN(r[i]) || Number.isNaN(sg[i]) || Number.isNaN(med[i]));
+      if (ok) state[i] = T[i] * 6 + R[i] * 2 + V[i];
+    }
+    return { sma50: s50, sma200: s200, rsi: r, sigma: sg, med, state, T, R, V };
+  }
+
+  // Исход плана для входа в день i: цель/стоп ±b (в логарифмах), выход по времени через H дней.
+  // Если в один день задеты и цель, и стоп — считаем, что сначала сработал стоп.
+  function outcomes(h, l, c, sg, H, fee, nComplete) {
+    const n = c.length, winL = nanArr(n), retL = nanArr(n), winS = nanArr(n), retS = nanArr(n);
+    for (let i = 0; i + H < nComplete; i++) {
+      if (Number.isNaN(sg[i])) continue;
+      const b = K * sg[i] * Math.sqrt(H), up = c[i] * Math.exp(b), dn = c[i] * Math.exp(-b);
+      let rl = null, rs = null;
+      for (let j = i + 1; j <= i + H; j++) {
+        const hitU = h[j] >= up, hitD = l[j] <= dn;
+        if (rl === null) { if (hitD) rl = Math.exp(-b) - 1; else if (hitU) rl = Math.exp(b) - 1; }
+        if (rs === null) { if (hitU) rs = 1 - Math.exp(b); else if (hitD) rs = 1 - Math.exp(-b); }
+        if (rl !== null && rs !== null) break;
+      }
+      if (rl === null) rl = c[i + H] / c[i] - 1;
+      if (rs === null) rs = 1 - c[i + H] / c[i];
+      rl -= fee; rs -= fee;
+      retL[i] = rl; winL[i] = rl > 0 ? 1 : 0;
+      retS[i] = rs; winS[i] = rs > 0 ? 1 : 0;
+    }
+    return { winL, retL, winS, retS };
+  }
+
+  // Для каждого t в [tFrom, tTo]: оценка только по дням j <= t-H (их исход к дню t уже известен).
+  function walk(state, oc, H, tFrom, tTo) {
+    const S = 18, z = () => new Float64Array(S);
+    const cnt = z(), eff = z(), last = new Float64Array(S).fill(-1e9);
+    const sw = { winL: z(), retL: z(), winS: z(), retS: z() };
+    const swp = { wL: z(), lL: z(), wS: z(), lS: z() }, nwp = { wL: z(), lL: z(), wS: z(), lS: z() };
+    const sum = (a) => { let s = 0; for (let k = 0; k < a.length; k++) s += a[k]; return s; };
+    const out = [];
+    let j = 0;
+    for (let t = tFrom; t <= tTo; t++) {
+      while (j <= t - H) {
+        const s = state[j];
+        if (s >= 0 && !Number.isNaN(oc.winL[j])) {
+          cnt[s] += 1;
+          for (const k in sw) sw[k][s] += oc[k][j];
+          for (const side of ["L", "S"]) {
+            const r = oc["ret" + side][j];
+            if (r > 0) { swp["w" + side][s] += r; nwp["w" + side][s] += 1; }
+            else { swp["l" + side][s] += r; nwp["l" + side][s] += 1; }
+          }
+          if (j - last[s] >= H) { eff[s] += 1; last[s] = j; }
+        }
+        j++;
+      }
+      const s = state[t];
+      if (s < 0) { out.push(null); continue; }
+      const N = sum(cnt);
+      if (N < MIN_BASE) { out.push(null); continue; }
+      const e = { t, state: s, n: cnt[s], neff: eff[s], nAll: N };
+      for (const side of ["L", "S"]) {
+        const pb = sum(sw["win" + side]) / N, rb = sum(sw["ret" + side]) / N;
+        const n = cnt[s], ne = eff[s];
+        const praw = n > 0 ? sw["win" + side][s] / n : pb;
+        const rraw = n > 0 ? sw["ret" + side][s] / n : rb;
+        const p = (praw * ne + pb * PRIOR_M) / (ne + PRIOR_M);
+        const r = (rraw * ne + rb * PRIOR_M) / (ne + PRIOR_M);
+        const aw = sum(swp["w" + side]) / Math.max(1, sum(nwp["w" + side]));
+        const al = sum(swp["l" + side]) / Math.max(1, sum(nwp["l" + side]));
+        const be = aw - al > 0 ? -al / (aw - al) : 0.5;
+        const se = Math.sqrt(Math.max(p * (1 - p), 1e-9) / (ne + PRIOR_M));
+        Object.assign(e, {
+          ["p" + side]: p, ["pb" + side]: pb, ["r" + side]: r, ["rb" + side]: rb, ["be" + side]: be, ["praw" + side]: praw,
+          ["lo" + side]: Math.max(0, p - 1.96 * se), ["hi" + side]: Math.min(1, p + 1.96 * se),
+          ["aw" + side]: aw, ["al" + side]: al,
+        });
+      }
+      out.push(e);
+    }
+    return out;
+  }
+
+  // Строгое правило: сигнал только если даже нижняя граница вероятности выше безубыточной.
+  function verdict(e) {
+    if (!e || e.neff < MIN_NEFF) return "WAIT";
+    if (e.loL > e.beL && e.rL > 0) return "BUY";
+    if (e.loS > e.beS && e.rS > 0) return "SELL";
+    return "WAIT";
+  }
+
+  const BINS = [[0, 0.45], [0.45, 0.55], [0.55, 0.65], [0.65, 0.8], [0.8, 1.0001]];
+
+  function analyze(ser, H, trackBars = 730) {
+    const { c, h, l, nComplete, fee } = ser;
+    const f = ser.feat || (ser.feat = features(c));
+    const N = c.length;
+    const oc = outcomes(h, l, c, f.sigma, H, fee, nComplete);
+    const tLast = nComplete - 1 - H;                 // последний день, чей исход уже известен
+    const tFrom = Math.max(0, tLast - trackBars + 1);
+    const ests = walk(f.state, oc, H, tFrom, N - 1);
+    const now = ests[ests.length - 1];
+
+    const bins = BINS.map(([lo, hi]) => ({ lo, hi, n: 0, sumP: 0, hit: 0 }));
+    let days = 0, bm = 0, bb = 0, n80 = 0, hit80 = 0;
+    const sig = { BUY: [], SELL: [] };
+    for (const e of ests) {
+      if (!e || e.t > tLast) continue;
+      days++;
+      for (const side of ["L", "S"]) {
+        const p = e["p" + side], y = oc["win" + side][e.t];
+        bm += (p - y) ** 2; bb += (e["pb" + side] - y) ** 2;
+        const bin = bins.find((b) => p >= b.lo && p < b.hi);
+        bin.n++; bin.sumP += p; bin.hit += y;
+        if (p >= 0.8) { n80++; hit80 += y; }
+      }
+      const v = verdict(e);
+      if (v === "BUY") sig.BUY.push(oc.retL[e.t]);
+      if (v === "SELL") sig.SELL.push(oc.retS[e.t]);
+    }
+    const stat = (arr) => arr.length ? {
+      n: arr.length, hit: arr.filter((x) => x > 0).length / arr.length, avg: arr.reduce((a, x) => a + x, 0) / arr.length,
+    } : { n: 0 };
+    const sNow = f.sigma[N - 1];
+    const b = K * sNow * Math.sqrt(H);
+    const skill = bb > 0 ? 1 - bm / bb : 0;
+    // Модель показываем, только если на этом активе она была точнее общей частоты; иначе честнее показать общую частоту.
+    const useModel = days >= 180 && skill > 0;
+    let shown = now;
+    if (now && !useModel) {
+      const nb = Math.max(1, now.nAll / H);   // число неперекрывающихся окон по всей истории
+      shown = { ...now, fromBase: true, neff: Math.round(nb) };
+      for (const side of ["L", "S"]) {
+        const p = now["pb" + side], se = Math.sqrt(Math.max(p * (1 - p), 1e-9) / nb);
+        shown["p" + side] = p; shown["r" + side] = now["rb" + side];
+        shown["lo" + side] = Math.max(0, p - 1.96 * se); shown["hi" + side] = Math.min(1, p + 1.96 * se);
+      }
+    }
+    return {
+      H, now: shown, model: now, useModel, verdict: useModel ? verdict(now) : "WAIT", b, tp: Math.exp(b) - 1, sl: 1 - Math.exp(-b),
+      track: { days, skill, bins, n80, hit80, buy: stat(sig.BUY), sell: stat(sig.SELL) },
+    };
+  }
+
+  // Как часто за H свечей цена хотя бы раз уходила против позиции на dist (по всей истории).
+  function adverse(ser, H, dist) {
+    const { h, l, c, nComplete } = ser;
+    let n = 0, aL = 0, aS = 0;
+    for (let i = 0; i + H < nComplete; i++) {
+      const dnL = c[i] * (1 - dist), upS = c[i] * (1 + dist);
+      let hitL = 0, hitS = 0;
+      for (let j = i + 1; j <= i + H; j++) { if (l[j] <= dnL) hitL = 1; if (h[j] >= upS) hitS = 1; if (hitL && hitS) break; }
+      n++; aL += hitL; aS += hitS;
+    }
+    return n ? { n, long: aL / n, short: aS / n } : { n: 0, long: NaN, short: NaN };
+  }
+
+  return { K, PRIOR_M, MIN_NEFF, MMR, features, outcomes, walk, verdict, analyze, adverse, sma, rsi, sigma20 };
+})();
+if (typeof module !== "undefined") module.exports = Engine;
+
+</script>
+<script>
+(() => {
+  "use strict";
+  const $ = (s, r = document) => r.querySelector(s);
+  const esc = (s) => String(s).replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
+  const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+
+  /* ---------- Справочники ---------- */
+  const API = "https://data-api.binance.vision/api/v3";
+  const FX_API = "https://api.frankfurter.dev/v1/";
+  const FX_START = "2012-01-02";
+  const FEE_CRYPTO = 0.0011;   // тейкер Bybit на фьючерсах: 0,055% на вход и 0,055% на выход
+  const FEE_FX = 0.0005;
+  const ECB = new Set("AUD BRL CAD CHF CNY CZK DKK EUR GBP HKD HUF IDR ILS INR ISK JPY KRW MXN MYR NOK NZD PHP PLN RON SEK SGD THB TRY USD ZAR".split(" "));
+  const PEGS = {
+    AED: { rate: 3.6725, since: 1997, name: "дирхам ОАЭ" },
+    SAR: { rate: 3.75, since: 1986, name: "саудовский риял" },
+    QAR: { rate: 3.64, since: 2001, name: "катарский риал" },
+    OMR: { rate: 0.3845, since: 1986, name: "оманский риал" },
+    BHD: { rate: 0.376, since: 2001, name: "бахрейнский динар" },
+    JOD: { rate: 0.709, since: 1995, name: "иорданский динар" },
+  };
+  const OTHER_FIAT = new Set("RUB KZT UAH BYN UZS GEL AMD AZN KGS TJS VND ARS EGP NGN PKR KWD BGN".split(" "));
+  const FIAT = new Set([...ECB, ...Object.keys(PEGS), ...OTHER_FIAT]);
+  const CUR = {
+    USD: ["доллар", "доллару"], EUR: ["евро", "евро"], GBP: ["фунт", "фунту"], JPY: ["иена", "иене"],
+    CNY: ["юань", "юаню"], TRY: ["лира", "лире"], CHF: ["франк", "франку"], AED: ["дирхам", "дирхаму"],
+    RUB: ["рубль", "рублю"], KZT: ["тенге", "тенге"], SAR: ["риял", "риялу"], INR: ["рупия", "рупии"],
+    CAD: ["канадский доллар", "канадскому доллару"], AUD: ["австралийский доллар", "австралийскому доллару"],
+    HKD: ["гонконгский доллар", "гонконгскому доллару"], SGD: ["сингапурский доллар", "сингапурскому доллару"],
+    KRW: ["вона", "воне"], PLN: ["злотый", "злотому"], CZK: ["чешская крона", "чешской кроне"],
+    SEK: ["шведская крона", "шведской кроне"], NOK: ["норвежская крона", "норвежской кроне"], BRL: ["реал", "реалу"],
+    MXN: ["песо", "песо"], ZAR: ["рэнд", "рэнду"], THB: ["бат", "бату"], ILS: ["шекель", "шекелю"], HUF: ["форинт", "форинту"],
+  };
+  const COIN = {
+    BTC: "Биткоин", ETH: "Эфир", SOL: "Solana", BNB: "BNB", XRP: "XRP", DOGE: "Dogecoin", SHIB: "Shiba Inu",
+    PEPE: "Pepe", WIF: "dogwifhat", BONK: "Bonk", FLOKI: "Floki", TRUMP: "Official Trump", PAXG: "Золото (PAXG)",
+    TON: "Toncoin", ADA: "Cardano", TRX: "TRON", LINK: "Chainlink", AVAX: "Avalanche", SUI: "Sui", LTC: "Litecoin",
+  };
+  // Запросы для поиска новостей (короткие тикеры путаются с обычными словами)
+  const NEWSQ = {
+    BTC: "bitcoin", ETH: "ethereum", SOL: "solana", BNB: "bnb crypto", XRP: "xrp crypto", DOGE: "dogecoin",
+    SHIB: "\"shiba inu\"", PEPE: "pepe crypto", WIF: "dogwifhat", BONK: "bonk crypto", FLOKI: "floki crypto",
+    TRUMP: "\"trump coin\" OR \"trump memecoin\"", PAXG: "\"pax gold\"", TON: "toncoin", ADA: "cardano", TRX: "tron crypto",
+    LINK: "chainlink", AVAX: "avalanche crypto", SUI: "sui crypto", LTC: "litecoin",
+  };
+  // Фьючерсы Bybit, где цена считается за 1000 монет
+  const BYBIT_1000 = { PEPE: "1000PEPEUSDT", BONK: "1000BONKUSDT", SHIB: "SHIB1000USDT", FLOKI: "1000FLOKIUSDT", LUNC: "1000LUNCUSDT", XEC: "1000XECUSDT", SATS: "1000SATSUSDT", RATS: "1000RATSUSDT", TURBO: "1000TURBOUSDT" };
+  const ALIAS = {
+    "биткоин": "BTC", "биткойн": "BTC", "эфир": "ETH", "эфириум": "ETH", "солана": "SOL",
+    "доги": "DOGE", "доге": "DOGE", "догикоин": "DOGE", "пепе": "PEPE", "шиба": "SHIB", "золото": "PAXG", "тон": "TON",
+    "евро": "EUR/USD", "фунт": "GBP/USD", "иена": "USD/JPY", "йена": "USD/JPY", "юань": "USD/CNY",
+    "лира": "USD/TRY", "франк": "USD/CHF", "дирхам": "AED/USD", "рубль": "USD/RUB", "тенге": "USD/KZT",
+  };
+  const DEFAULT_LIST = ["BTC", "ETH", "SOL", "DOGE", "PEPE", "PAXG", "EUR/USD", "USD/TRY", "AED/USD"];
+  const MODES = {
+    d: { label: "Дни", candle: "1 день", interval: "1d", pages: 3, horizons: [3, 7, 14, 30], track: 730, words: ["день", "дня", "дней"], per: "в день", recent: 30, recentTxt: "За 30 дней", lenTxt: "дней", ms: 86400e3, refresh: 15 },
+    h: { label: "Часы", candle: "1 час", interval: "1h", pages: 5, horizons: [1, 4, 12, 24], track: 2000, words: ["час", "часа", "часов"], per: "в час", recent: 24, recentTxt: "За 24 часа", lenTxt: "часов", ms: 3600e3, refresh: 5 },
+  };
+  const CODE_LABEL = { NA: "Нет оценки", PEG: "Не торгуется", ERR: "Ошибка", LOAD: "Загрузка" };
+  const MONTHS = ["янв", "фев", "мар", "апр", "май", "июн", "июл", "авг", "сен", "окт", "ноя", "дек"];
+  const FNG_RU = { "Extreme Fear": "сильный страх", "Fear": "страх", "Neutral": "нейтрально", "Greed": "жадность", "Extreme Greed": "сильная жадность" };
+  const RISK_RE = /hack|exploit|breach|stolen|drain|delist|lawsuit|\bsues?\b|\bsued\b|investigat|\bban(ned|s)?\b|rug ?pull|scam|outage|\bhalt|plunge|crash|\bdump|sell-?off|unlock|liquidat|взлом|делистинг|\bиск|запрет|мошен|обвал|разлок|ликвидац/i;
+  const GOOD_RE = /listing|\blists\b|\blisted\b|\betf\b|approv|partnership|integrat|upgrade|mainnet|launch|surge|soar|\brall(y|ies)\b|record|all-time high|\bath\b|листинг|одобр|партн[её]р|запуск|рекорд/i;
+
+  /* ---------- Форматирование ---------- */
+  const nfCache = {};
+  const nf = (d) => nfCache[d] || (nfCache[d] = new Intl.NumberFormat("ru-RU", { minimumFractionDigits: d, maximumFractionDigits: d }));
+  const sig4 = new Intl.NumberFormat("ru-RU", { maximumSignificantDigits: 4 });
+  function fmtPrice(v, kind) {
+    if (!Number.isFinite(v)) return "—";
+    const a = Math.abs(v);
+    if (kind === "fx") return a >= 100 ? nf(2).format(v) : a >= 1 ? nf(4).format(v) : sig4.format(v);
+    if (a >= 1000) return nf(0).format(v);
+    if (a >= 100) return nf(1).format(v);
+    if (a >= 10) return nf(2).format(v);
+    if (a >= 1) return nf(3).format(v);
+    return sig4.format(v);
+  }
+  const pct = (x, d = 1) => nf(d).format(x * 100) + "%";
+  const spct = (x, d = 1) => (x > 0 ? "+" : x < 0 ? "−" : "") + nf(d).format(Math.abs(x) * 100) + "%";
+  const pp = (x) => Math.round(x * 100) + "%";
+  const usd = (x) => nf(Math.abs(x) >= 100 ? 0 : 2).format(x) + " USDT";
+  const plural = (n, f) => n + " " + (n % 10 === 1 && n % 100 !== 11 ? f[0] : [2, 3, 4].includes(n % 10) && ![12, 13, 14].includes(n % 100) ? f[1] : f[2]);
+  const hhmm = (d) => d.toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit" });
+  const hhmmss = (d) => d.toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+  const ddmm = (d) => d.toLocaleDateString("ru-RU", { day: "numeric", month: "long" });
+  function ago(ms) {
+    const m = Math.round((Date.now() - ms) / 60000);
+    if (m < 60) return plural(Math.max(1, m), ["минуту", "минуты", "минут"]) + " назад";
+    const h = Math.round(m / 60);
+    if (h < 48) return plural(h, ["час", "часа", "часов"]) + " назад";
+    return plural(Math.round(h / 24), ["день", "дня", "дней"]) + " назад";
+  }
+  function closeLabel(d) {
+    const now = new Date(), tm = new Date(now); tm.setDate(now.getDate() + 1);
+    if (d.toDateString() === now.toDateString()) return "сегодня в " + hhmm(d);
+    if (d.toDateString() === tm.toDateString()) return "завтра в " + hhmm(d);
+    return ddmm(d) + " в " + hhmm(d);
+  }
+  // Число для вставки в биржу: с точкой, без разделителей тысяч
+  function plain(v, dec) { return Number.isFinite(v) ? v.toFixed(Math.max(0, Math.min(12, dec))) : ""; }
+  function decFromStep(step) { return step > 0 ? Math.max(0, Math.min(12, Math.round(-Math.log10(step)))) : 8; }
+  function roundTo(v, step) { return step > 0 ? Math.round(v / step) * step : v; }
+
+  /* ---------- Разбор ввода ---------- */
+  function fxTitle(b, q) { return CUR[b] && CUR[q] ? cap(CUR[b][0]) + " к " + CUR[q][1] : b + " к " + q; }
+  function parseAsset(raw) {
+    let s = String(raw || "").trim();
+    if (!s) return null;
+    const al = ALIAS[s.toLowerCase()];
+    if (al) s = al;
+    s = s.toUpperCase().replace(/\s+/g, "").replace(/[-_\\|:]/g, "/");
+    let base, quote = null;
+    if (s.includes("/")) [base, quote] = s.split("/");
+    else if (/^[A-Z]{6}$/.test(s) && FIAT.has(s.slice(0, 3)) && FIAT.has(s.slice(3))) { base = s.slice(0, 3); quote = s.slice(3); }
+    else if (/^[A-Z0-9]{2,15}USDT$/.test(s)) { base = s.slice(0, -4); quote = "USDT"; }
+    else base = s;
+    if (/^1000[A-Z]{2,}$/.test(base)) base = base.slice(4);
+    if (/^[A-Z]{2,}1000$/.test(base)) base = base.slice(0, -4);
+    const bad = { error: "Не понял, что это. Примеры: PEPE, ETH/BTC, EUR/USD, дирхам." };
+    if (!/^[A-Z0-9]{2,15}$/.test(base || "") || (quote !== null && !/^[A-Z0-9]{2,10}$/.test(quote))) return bad;
+    if (FIAT.has(base)) {
+      if (!quote) {
+        if (base === "USD") return { error: "Укажи пару, например USD/JPY." };
+        quote = "USD";
+      }
+      if (FIAT.has(quote)) return fxDef(base, quote);
+    }
+    if (!quote || quote === "USD") quote = "USDT";
+    const id = quote === "USDT" ? base : base + "/" + quote;
+    const name = COIN[base] || base;
+    return { id, kind: "crypto", symbol: base + quote, base, quote, title: quote === "USDT" ? name : `${name} к ${quote}`, sub: `${base}/${quote} · Binance`, fee: FEE_CRYPTO };
+  }
+  function fxDef(b, q) {
+    const id = b + "/" + q;
+    if (b === q) return { error: "Валюта к самой себе — это всегда 1." };
+    const pb = PEGS[b], pq = PEGS[q];
+    const base = { id, base: b, quote: q, title: id, sub: fxTitle(b, q) };
+    if (pb && pq) {
+      return { ...base, kind: "peg", msg: `Обе валюты привязаны к доллару, поэтому и друг к другу курс постоянный: 1 ${b} = ${nf(4).format(pq.rate / pb.rate)} ${q}. Заработать на этой паре нельзя.` };
+    }
+    if ((pb && q === "USD") || (pq && b === "USD")) {
+      const p = pb || pq, code = pb ? b : q;
+      return { ...base, kind: "peg", msg: `${cap(p.name)} привязан к доллару с ${p.since} года: 1 USD = ${nf(4).format(p.rate)} ${code}. Курс стоит на месте, поэтому ни покупка, ни продажа ничего не дадут. Если нужен ${CUR[code] ? CUR[code][0] : code} к другой валюте, добавь, например, ${code}/EUR: он будет двигаться ровно как USD/EUR.` };
+    }
+    let lb = b, lq = q, scale = 1, note = null;
+    if (pb) { lb = "USD"; scale /= pb.rate; note = `${cap(pb.name)} привязан к доллару (1 USD = ${nf(4).format(pb.rate)} ${b}), поэтому ${id} движется ровно как USD/${q}.`; }
+    if (pq) { lq = "USD"; scale *= pq.rate; note = `${cap(pq.name)} привязан к доллару (1 USD = ${nf(4).format(pq.rate)} ${q}), поэтому ${id} движется ровно как ${b}/USD.`; }
+    if (!ECB.has(lb) || !ECB.has(lq)) {
+      const which = !ECB.has(lb) ? lb : lq;
+      const msg = which === "RUB"
+        ? "Курса рубля нет в открытых данных ЕЦБ с марта 2022 года, поэтому истории для расчёта нет."
+        : `Валюты ${which} нет в данных ЕЦБ, поэтому истории для расчёта нет.`;
+      return { ...base, kind: "na", msg };
+    }
+    return { ...base, kind: "fx", lb, lq, scale, note, sub: fxTitle(b, q) + " · ЕЦБ", fee: FEE_FX };
+  }
+
+  /* ---------- Загрузка данных ---------- */
+  async function getJSON(url, ms = 20000) {
+    const ctl = new AbortController();
+    const tm = setTimeout(() => ctl.abort(), ms);
+    try {
+      const r = await fetch(url, { signal: ctl.signal, cache: "no-store" });
+      const body = await r.json().catch(() => null);
+      if (!r.ok) { const e = new Error((body && (body.msg || body.message)) || "HTTP " + r.status); e.status = r.status; e.code = body && body.code; throw e; }
+      return body;
+    } finally { clearTimeout(tm); }
+  }
+  async function loadBinance(symbol, mode) {
+    const M = MODES[mode];
+    let rows = [], end = null;
+    for (let page = 0; page < M.pages; page++) {
+      const part = await getJSON(`${API}/klines?symbol=${encodeURIComponent(symbol)}&interval=${M.interval}&limit=1000${end ? "&endTime=" + end : ""}`);
+      if (!Array.isArray(part) || !part.length) break;
+      rows = part.concat(rows);
+      if (part.length < 1000) break;
+      end = part[0][0] - 1;
+    }
+    const seen = new Set(), clean = [];
+    for (const k of rows) { if (!seen.has(k[0])) { seen.add(k[0]); clean.push(k); } }
+    if (!clean.length) { const e = new Error("empty"); e.code = -1121; throw e; }
+    const N = clean.length, num = (i) => Float64Array.from(clean, (k) => +k[i]);
+    const inProgress = clean[N - 1][6] > Date.now();
+    return {
+      t: clean.map((k) => k[0]), c: num(4), h: num(2), l: num(3),
+      nComplete: inProgress ? N - 1 : N, fee: FEE_CRYPTO, src: "Binance", asOf: new Date(),
+    };
+  }
+  async function loadFx(b, q) {
+    const d = await getJSON(`${FX_API}${FX_START}..?base=${b}&symbols=${q}`);
+    const dates = Object.keys(d.rates || {}).sort();
+    if (!dates.length) throw new Error("empty");
+    const c = Float64Array.from(dates, (x) => d.rates[x][q]);
+    return { t: dates.map((x) => Date.parse(x + "T00:00:00Z")), c, h: c, l: c, nComplete: c.length, fee: FEE_FX, src: "ЕЦБ", asOf: new Date(dates[dates.length - 1] + "T12:00:00Z") };
+  }
+  async function fetchSeries(def, mode) {
+    if (def.kind === "crypto") return loadBinance(def.symbol, mode);
+    const s = await loadFx(def.lb, def.lq);
+    if (def.scale !== 1) { s.c = s.c.map((v) => v * def.scale); s.h = s.c; s.l = s.c; }
+    return s;
+  }
+  function humanError(e, def) {
+    if (e && (e.code === -1121 || (e.status === 400 && def.kind === "crypto"))) return `Пары ${def.symbol} нет на Binance. Попробуй тикер монеты, например PEPE, или пару вида ETH/BTC.`;
+    if (e && e.name === "AbortError") return "Источник данных долго не отвечает. Нажми «Обновить» чуть позже.";
+    if (e && e.status === 429) return "Источник просит подождать: слишком много запросов. Обнови через минуту.";
+    if (e && e.status === 404 && def.kind === "fx") return "У ЕЦБ нет данных по этой паре.";
+    if (e instanceof TypeError) return "Нет связи с источником данных. Проверь интернет и нажми «Обновить».";
+    return "Не получилось загрузить данные: " + (e && e.message ? e.message : "неизвестная ошибка");
+  }
+
+  /* ---------- Состояние ---------- */
+  const STORE = "barometr.v3";
+  const S = {
+    mode: "h", Hd: 7, Hh: 1, list: DEFAULT_LIST.slice(), selected: "BTC", lev: 1, risk: 1, dep: 100,
+    assets: new Map(), updated: { d: null, h: null }, busy: false,
+  };
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORE) || localStorage.getItem("barometr.v2") || localStorage.getItem("barometr.v1") || "null");
+    if (saved && Array.isArray(saved.list) && saved.list.length) S.list = saved.list.filter((x) => typeof x === "string").slice(0, 40);
+    if (saved && (saved.mode === "d" || saved.mode === "h")) S.mode = saved.mode;
+    if (saved && MODES.d.horizons.includes(saved.Hd)) S.Hd = saved.Hd;
+    if (saved && MODES.h.horizons.includes(saved.Hh)) S.Hh = saved.Hh;
+    if (saved && typeof saved.selected === "string") S.selected = saved.selected;
+    if (saved && saved.lev >= 1 && saved.lev <= 125) S.lev = saved.lev;
+    if (saved && saved.risk > 0 && saved.risk <= 20) S.risk = saved.risk;
+    if (saved && saved.dep > 0 && saved.dep < 1e9) S.dep = saved.dep;
+  } catch (e) { /* хранилище недоступно — работаем с настройками по умолчанию */ }
+  function persist() {
+    try { localStorage.setItem(STORE, JSON.stringify({ list: S.list, mode: S.mode, Hd: S.Hd, Hh: S.Hh, selected: S.selected, lev: S.lev, risk: S.risk, dep: S.dep })); } catch (e) { /* ничего */ }
+  }
+  const curH = () => (S.mode === "h" ? S.Hh : S.Hd);
+  const M = () => MODES[S.mode];
+  const span = (n) => plural(n, M().words);
+
+  function ensureAsset(id) {
+    if (S.assets.has(id)) return S.assets.get(id);
+    const def = parseAsset(id);
+    const a = {
+      id, def: def && !def.error ? def : { id, kind: "na", title: id, sub: "", msg: (def && def.error) || "Не понял, что это." },
+      ser: { d: null, h: null }, err: { d: null, h: null }, stale: { d: null, h: null }, res: { d: {}, h: {} },
+      live: null, rules: null, news: null,
+    };
+    S.assets.set(id, a);
+    return a;
+  }
+  const noHourly = (a) => S.mode === "h" && (a.def.kind === "fx" || a.def.kind === "peg");
+  function resultFor(a) {
+    const ser = a.ser[S.mode];
+    if (!ser) return null;
+    const H = curH(), cache = a.res[S.mode];
+    if (!cache[H]) cache[H] = Engine.analyze(ser, H, M().track);
+    return cache[H];
+  }
+  // Направление всегда одно из двух: то, где шанс сильнее превышает безубыток (или меньше до него не дотягивает)
+  function decide(r) {
+    const e = r.now, eL = e.pL - e.beL, eS = e.pS - e.beS;
+    const side = eL >= eS ? "L" : "S";
+    const strong = (side === "L" && r.verdict === "BUY") || (side === "S" && r.verdict === "SELL");
+    return { side, strong, p: e["p" + side], be: e["be" + side], lo: e["lo" + side], hi: e["hi" + side], rv: e["r" + side], edge: side === "L" ? eL : eS, other: side === "L" ? e.pS : e.pL };
+  }
+  function statusOf(a) {
+    if (a.def.kind === "peg") return { code: "PEG" };
+    if (a.def.kind === "na" || noHourly(a)) return { code: "NA" };
+    if (a.err[S.mode] && !a.ser[S.mode]) return { code: "ERR" };
+    if (!a.ser[S.mode]) return { code: "LOAD" };
+    const r = resultFor(a);
+    if (!r.now) return { code: "NA" };
+    return { r, d: decide(r) };
+  }
+  const dirWord = (side) => (side === "L" ? "Покупать" : "Продавать");
+  const dirCls = (side) => (side === "L" ? "v-BUY" : "v-SELL");
+
+  /* ---------- Загрузка списка ---------- */
+  // При обновлении докачиваем только последние свечи: так приложение тратит в сотни раз меньше трафика
+  async function updateBinance(ser, symbol, mode) {
+    const M0 = MODES[mode], step = M0.ms;
+    const part = await getJSON(`${API}/klines?symbol=${encodeURIComponent(symbol)}&interval=${M0.interval}&limit=5`);
+    if (!Array.isArray(part) || !part.length) return null;
+    const lastT = ser.t[ser.t.length - 1];
+    if (part[0][0] - lastT > step) return null;          // пропуск свечей — нужна полная загрузка
+    const t = ser.t.slice(), c = Array.from(ser.c), h = Array.from(ser.h), l = Array.from(ser.l);
+    for (const k of part) {
+      let idx = -1;
+      for (let q = t.length - 1; q >= Math.max(0, t.length - 10); q--) if (t[q] === k[0]) { idx = q; break; }
+      if (idx >= 0) { c[idx] = +k[4]; h[idx] = +k[2]; l[idx] = +k[3]; }
+      else if (k[0] > t[t.length - 1]) { t.push(k[0]); c.push(+k[4]); h.push(+k[2]); l.push(+k[3]); }
+    }
+    const cut = Math.max(0, t.length - M0.pages * 1000), T = t.slice(cut), F = (arr) => Float64Array.from(arr.slice(cut));
+    const inProgress = part[part.length - 1][6] > Date.now();
+    return { t: T, c: F(c), h: F(h), l: F(l), nComplete: inProgress ? T.length - 1 : T.length, fee: ser.fee, src: ser.src, asOf: new Date() };
+  }
+  async function loadOne(a, mode) {
+    if (a.def.kind !== "crypto" && a.def.kind !== "fx") return;
+    if (mode === "h" && a.def.kind !== "crypto") return;
+    try {
+      let ser = null;
+      if (a.ser[mode] && a.def.kind === "crypto") { try { ser = await updateBinance(a.ser[mode], a.def.symbol, mode); } catch (e) { ser = null; } }
+      if (!ser) ser = await fetchSeries(a.def, mode);
+      a.ser[mode] = ser; a.err[mode] = null; a.stale[mode] = null; a.res[mode] = {};
+    } catch (e) {
+      if (!a.ser[mode]) a.err[mode] = humanError(e, a.def); else a.stale[mode] = humanError(e, a.def);
+    }
+  }
+  async function refreshAll() {
+    if (S.busy) return;
+    const mode = S.mode;
+    S.busy = true; renderStatus();
+    loadMood();
+    const assets = S.list.map(ensureAsset);
+    let i = 0;
+    const worker = async () => {
+      while (i < assets.length) {
+        const a = assets[i++];
+        await loadOne(a, mode);
+        await new Promise((r) => setTimeout(r, 0));
+        if (S.mode === mode) { renderList(); if (a.id === S.selected) renderDetail(); }
+      }
+    };
+    await Promise.all([worker(), worker(), worker()]);
+    S.busy = false; S.updated[mode] = new Date();
+    renderAll();
+  }
+
+  /* ---------- Живая цена и шаг цены ---------- */
+  let liveTimer = null;
+  function startLive() {
+    clearInterval(liveTimer);
+    const a = S.assets.get(S.selected);
+    if (!a || a.def.kind !== "crypto") return;
+    if (!a.rules) {
+      a.rules = { tick: 0, step: 0 };
+      getJSON(`${API}/exchangeInfo?symbol=${a.def.symbol}`, 15000).then((j) => {
+        const f = (j.symbols && j.symbols[0] && j.symbols[0].filters) || [];
+        const pf = f.find((x) => x.filterType === "PRICE_FILTER"), ls = f.find((x) => x.filterType === "LOT_SIZE");
+        a.rules = { tick: pf ? +pf.tickSize : 0, step: ls ? +ls.stepSize : 0 };
+        if (a.id === S.selected) renderTicket();
+      }).catch(() => {});
+    }
+    const tick = async () => {
+      if (document.visibilityState !== "visible" || S.selected !== a.id) return;
+      try {
+        const j = await getJSON(`${API}/ticker/price?symbol=${a.def.symbol}`, 8000);
+        a.live = { price: +j.price, at: Date.now() };
+        if (S.selected === a.id) updateLive(a);
+      } catch (e) { /* следующая попытка через 5 секунд */ }
+    };
+    tick();
+    liveTimer = setInterval(tick, 5000);
+  }
+  function livePrice(a) {
+    const s = a.ser[S.mode];
+    if (a.live && Date.now() - a.live.at < 60000) return a.live.price;
+    return s ? s.c[s.c.length - 1] : NaN;
+  }
+  function updateLive(a) {
+    const el = $("#live-price"), tm = $("#live-time");
+    if (el) el.textContent = fmtPrice(a.live.price, a.def.kind);
+    if (tm) tm.textContent = "живая цена, " + hhmmss(new Date(a.live.at));
+    renderTicket();
+  }
+
+  /* ---------- Новости и настроение ---------- */
+  const mood = { fng: null, trend: null, at: 0, fngErr: false, trendErr: false };
+  async function loadMood() {
+    if (Date.now() - mood.at < 10 * 60 * 1000) return;
+    mood.at = Date.now();
+    await Promise.all([
+      getJSON("https://api.alternative.me/fng/?limit=2", 12000).then((j) => { mood.fng = j.data; mood.fngErr = false; }).catch(() => { mood.fngErr = true; }),
+      getJSON("https://api.coingecko.com/api/v3/search/trending", 12000).then((j) => { mood.trend = (j.coins || []).map((c, k) => ({ sym: String(c.item.symbol || "").toUpperCase(), name: c.item.name, rank: k + 1 })); mood.trendErr = false; }).catch(() => { mood.trendErr = true; }),
+    ]);
+    renderNews();
+  }
+  let gdeltNext = 0;
+  async function loadNews(a) {
+    if (a.def.kind !== "crypto") return;
+    if (a.news && (a.news.loading || Date.now() - a.news.at < 15 * 60 * 1000)) return;
+    a.news = { loading: true, at: Date.now(), items: [], err: null };
+    const wait = Math.max(0, gdeltNext - Date.now());
+    gdeltNext = Date.now() + wait + 6000;
+    if (wait) await new Promise((r) => setTimeout(r, wait));
+    const q = NEWSQ[a.def.base] || `${a.def.base.toLowerCase()} crypto`;
+    const url = "https://api.gdeltproject.org/api/v2/doc/doc?" + new URLSearchParams({ query: q, mode: "artlist", format: "json", maxrecords: "15", timespan: "3d", sort: "datedesc" });
+    try {
+      const ctl = new AbortController(), tm = setTimeout(() => ctl.abort(), 20000);
+      const res = await fetch(url, { signal: ctl.signal });
+      clearTimeout(tm);
+      const text = await res.text();
+      let j = null; try { j = JSON.parse(text); } catch (e) { /* источник ответил текстом */ }
+      if (!j) throw new Error(/limit/i.test(text) ? "limit" : "bad");
+      const seen = new Set();
+      a.news.items = (j.articles || []).filter((x) => { const k = (x.title || "").toLowerCase().slice(0, 60); if (seen.has(k)) return false; seen.add(k); return true; }).slice(0, 8).map((x) => {
+        const s = String(x.seendate || ""), t = Date.UTC(+s.slice(0, 4), +s.slice(4, 6) - 1, +s.slice(6, 8), +s.slice(9, 11), +s.slice(11, 13));
+        const title = String(x.title || "").replace(/\s+([,.:;!?])/g, "$1");
+        return { title, url: x.url, domain: x.domain, t, flag: RISK_RE.test(title) ? "risk" : GOOD_RE.test(title) ? "good" : null };
+      });
+    } catch (e) { a.news.err = e.message === "limit" ? "limit" : "fail"; }
+    a.news.loading = false;
+    if (S.selected === a.id) { renderNews(); renderTicket(); }
+  }
+  function newsLinks(a) {
+    const q = (COIN[a.def.base] && a.def.base !== "PAXG" ? COIN[a.def.base] : a.def.base) + " криптовалюта";
+    const qe = (NEWSQ[a.def.base] || a.def.base + " crypto").replace(/"/g, "");
+    return `<a href="https://news.google.com/search?q=${encodeURIComponent(q + " when:3d")}&hl=ru&gl=RU&ceid=RU:ru" target="_blank" rel="noopener">по-русски</a> · <a href="https://news.google.com/search?q=${encodeURIComponent(qe + " when:3d")}&hl=en-US&gl=US&ceid=US:en" target="_blank" rel="noopener">по-английски</a>`;
+  }
+  function renderNews() {
+    const box = $("#news");
+    if (!box) return;
+    const a = S.assets.get(S.selected);
+    if (!a) return;
+    let moodHtml = "";
+    if (mood.fng && mood.fng[0]) {
+      const n = mood.fng[0], y = mood.fng[1];
+      moodHtml += `<li><span>Страх и жадность (весь рынок)</span><span><b class="num">${n.value}</b> — ${FNG_RU[n.value_classification] || n.value_classification}${y ? `, вчера ${y.value}` : ""}</span></li>`;
+    } else moodHtml += `<li><span>Страх и жадность</span><span class="muted">${mood.fngErr ? "не загрузилось" : "загружаю…"}</span></li>`;
+    if (mood.trend) {
+      const hit = mood.trend.find((x) => x.sym === a.def.base);
+      moodHtml += `<li><span>Тренды CoinGecko</span><span>${hit ? `<b>${esc(a.def.base)} на ${hit.rank}-м месте</b>: интерес к монете сейчас повышен` : `${esc(a.def.base)} нет в трендах. Сейчас там: ${esc(mood.trend.slice(0, 5).map((x) => x.sym).join(", "))}`}</span></li>`;
+    } else moodHtml += `<li><span>Тренды CoinGecko</span><span class="muted">${mood.trendErr ? "не загрузилось" : "загружаю…"}</span></li>`;
+    let heads;
+    const nw = a.news;
+    if (!nw || nw.loading) heads = `<p class="muted small">Ищу свежие новости…</p>`;
+    else if (nw.err) heads = `<p class="muted small">${nw.err === "limit" ? "Источник новостей просит подождать (не больше одного запроса в 5 секунд). Открой новости по ссылкам ниже или загляни через минуту." : "Источник новостей сейчас не отвечает. Открой новости по ссылкам ниже."}</p>`;
+    else if (!nw.items.length) heads = `<p class="muted small">За 3 дня заметных статей в мировой прессе не нашлось. Для мемкоинов это частая ситуация: о них больше пишут в соцсетях, чем в СМИ.</p>`;
+    else heads = `<ul class="heads">${nw.items.map((x) => `<li>${x.flag ? `<span class="flag ${x.flag}">${x.flag === "risk" ? "риск" : "позитив"}</span>` : ""}<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a><small>${esc(x.domain || "")} · ${ago(x.t)}</small></li>`).join("")}</ul>`;
+    box.innerHTML = `<ul class="facts mood">${moodHtml}</ul>
+      <div><h4 class="mini-title">Заголовки за 3 дня</h4>${heads}</div>
+      <p class="small">Открыть свежие новости в Google: ${newsLinks(a)}</p>
+      <p class="small muted">Новости не меняют цифру шанса: проверить на истории, как заголовки двигают цену, не на чем, а к моменту публикации цена обычно уже сдвинулась. Используй их как предупреждение: взлом, делистинг или разлок токенов — серьёзный повод не входить, какой бы ни была цифра. Подробный разбор новостей по монете сделаю в чате.</p>`;
+  }
+
+  /* ---------- Тексты ---------- */
+  const TREND = ["нисходящий тренд", "явного тренда нет", "восходящий тренд"];
+  function summaryText(a, r, d) {
+    const t = r.track, e = r.now, s = a.ser[S.mode];
+    const dirW = d.side === "L" ? "Покупка (лонг)" : "Продажа (шорт)";
+    const tgt = d.side === "L" ? `цена дойдёт до ${spct(r.tp, 2)} раньше, чем до ${spct(-r.sl, 2)}` : `цена упадёт до ${spct(-r.sl, 2)} раньше, чем вырастет до ${spct(r.tp, 2)}`;
+    let out;
+    if (d.strong) out = `Сильный сигнал. Шанс, что ${tgt}, — ${pp(d.p)}. Даже по нижней границе оценки (${pp(d.lo)}) это выше безубыточных ${pp(d.be)}.`;
+    else if (d.edge > 0.02) out = `${dirW} с небольшим перевесом: шанс ${pp(d.p)} при безубытке ${pp(d.be)}. Но оценка может быть от ${pp(d.lo)} до ${pp(d.hi)}, так что перевес может оказаться случайным.`;
+    else if (d.edge >= -0.02) out = `${dirW} чуть лучше обратной сделки (${pp(d.p)} против ${pp(d.other)}), но это почти монетка: для безубытка нужно ${pp(d.be)}.`;
+    else out = `${dirW} выглядит лучше обратной сделки (${pp(d.p)} против ${pp(d.other)}), но обе ниже безубытка ${pp(d.be)}: по статистике такая сделка в среднем убыточна.${s.fee / r.tp >= 0.2 ? " Главная причина — комиссия: на таком коротком сроке она съедает большую часть движения." : ""}`;
+    if (t.days < 180) out += " Истории у этого актива мало, поэтому оценка почти ничего не говорит.";
+    else if (e.fromBase) out += " Модель здесь в последнее время не угадывала лучше простой статистики, поэтому цифры показывают, как обычно бывает на этом активе.";
+    return out;
+  }
+  function whyItems(a, r) {
+    const s = a.ser[S.mode], f = s.feat, N = s.c.length, i = N - 1, e = r.now, kind = a.def.kind, u = M().lenTxt;
+    const price = s.c[i], s50 = f.sma50[i], s200 = f.sma200[i], rs = f.rsi[i];
+    const items = [];
+    const T = f.T[i];
+    items.push({
+      cls: T === 2 ? "pos" : T === 0 ? "neg" : "",
+      text: `Цена ${price > s200 ? "выше" : "ниже"} средней за 200 ${u} (${fmtPrice(s200, kind)}), средняя за 50 ${u} ${s50 > s200 ? "выше" : "ниже"} 200-${S.mode === "h" ? "часовой" : "дневной"}. Значит, ${TREND[T]}.`,
+    });
+    let rt;
+    if (rs < 30) rt = "перепроданность: цену сильно продавили, бывают отскоки, но и продолжение падения тоже";
+    else if (rs < 35) rt = "слабость: продавцы активнее покупателей";
+    else if (rs > 70) rt = "перекупленность: цену сильно разогнали, часто дальше идёт откат или пауза";
+    else if (rs > 65) rt = "сила: покупатели активнее продавцов";
+    else rt = "нейтральная зона, ни перегрева, ни распродажи";
+    items.push({ cls: rs > 65 ? "pos" : rs < 35 ? "neg" : "", text: `RSI(14) = ${nf(0).format(rs)}: ${rt}.` });
+    const ratio = f.sigma[i] / f.med[i];
+    items.push({ cls: "", text: `Сейчас цена ходит в среднем на ±${pct(f.sigma[i], 2)} ${M().per}: ${ratio >= 1.15 ? `в ${nf(1).format(ratio)} раза сильнее, чем обычно` : ratio <= 0.87 ? "спокойнее, чем обычно" : "как обычно для этого актива"}.` });
+    const back = M().recent;
+    if (N > back + 1) { const m = s.c[i] / s.c[i - back] - 1; items.push({ cls: m > 0 ? "pos" : m < 0 ? "neg" : "", text: `${M().recentTxt}: ${spct(m)}.` }); }
+    if (e) {
+      const m = r.model;
+      items.push({
+        cls: "info",
+        text: `Такое же сочетание тренда, RSI и волатильности было в истории ${plural(m.n, M().words)} (примерно ${plural(m.neff, ["независимый эпизод", "независимых эпизода", "независимых эпизодов"])}). Тогда покупка закрывалась в плюс в ${pp(m.prawL)} случаев, продажа — в ${pp(m.prawS)}. По всей истории: ${pp(m.pbL)} и ${pp(m.pbS)}.${e.fromBase ? " Но на этом активе такие подсказки в последнее время не помогали, поэтому в расчёт взята общая частота." : ` С поправкой на размер выборки получается ${pp(e.pL)} и ${pp(e.pS)}.`}`,
+      });
+      const feeShare = s.fee / r.tp;
+      items.push(feeShare >= 0.2
+        ? { cls: "neg", text: `Комиссия ${pct(s.fee, 2)} за вход и выход съедает ${Math.round(feeShare * 100)}% цели ${spct(r.tp, 2)}. Поэтому для безубытка нужно хотя бы ${pp(e.beL)} удачных сделок.` }
+        : { cls: "", text: `С учётом комиссии (${pct(s.fee, 2)} за вход и выход) сделка окупается, если срабатывает чаще чем в ${pp(e.beL)} случаев.` });
+    }
+    if (kind === "crypto") {
+      let total = 0, above = 0, btc = null;
+      for (const id of S.list) {
+        const b = S.assets.get(id), sb = b && b.ser[S.mode];
+        if (!sb || b.def.kind !== "crypto" || b.def.quote !== "USDT") continue;
+        const fb = sb.feat || (sb.feat = Engine.features(sb.c)), Nb = sb.c.length;
+        if (Number.isNaN(fb.sma200[Nb - 1])) continue;
+        total++; if (sb.c[Nb - 1] > fb.sma200[Nb - 1]) above++;
+        if (b.def.base === "BTC") btc = fb.T[Nb - 1];
+      }
+      if (total >= 2) items.push({ cls: "info", text: `Фон рынка: ${btc === null ? "" : `у биткоина ${TREND[btc]}; `}выше 200-${S.mode === "h" ? "часовой" : "дневной"} средней ${above} из ${total} монет в твоём списке.` });
+    }
+    if (kind === "fx" && e && Math.max(e.pbL, e.pbS) >= 0.6) {
+      const up = e.pbL >= e.pbS, weak = up ? a.def.quote : a.def.base;
+      items.push({ cls: "info", text: `Большая часть перевеса — многолетний тренд: ${CUR[weak] ? CUR[weak][0] : weak} годами дешевеет. Средний итог такой сделки — ${spct(up ? e.rL : e.rS, 2)} за ${span(r.H)}, и это без процентов по вкладу: в валюте с высокой инфляцией они обычно высокие. Высокая вероятность здесь не значит большой выгоды.` });
+    }
+    if (a.def.note) items.push({ cls: "info", text: a.def.note });
+    return items;
+  }
+
+  /* ---------- Отрисовка: шапка ---------- */
+  function renderControls() {
+    $("#mode").innerHTML = Object.entries(MODES).map(([k, m]) => `<button type="button" data-mode="${k}" aria-pressed="${k === S.mode}">${m.label}</button>`).join("");
+    $("#horizon").innerHTML = M().horizons.map((h) => `<button type="button" data-h="${h}" aria-pressed="${h === curH()}">${span(h)}</button>`).join("");
+  }
+  function renderStatus() {
+    const btn = $("#refresh");
+    btn.disabled = S.busy; btn.classList.toggle("busy", S.busy);
+    $("#refresh-label").textContent = S.busy ? "Обновляю…" : "Обновить";
+    const parts = [];
+    const up = S.updated[S.mode];
+    if (up) parts.push("обновлено в " + hhmm(up));
+    parts.push("свечи по " + M().candle);
+    if (S.mode === "d") {
+      const fxAsOf = [...S.assets.values()].filter((a) => a.ser.d && a.ser.d.src === "ЕЦБ").map((a) => a.ser.d.asOf)[0];
+      parts.push("крипта: Binance" + (fxAsOf ? ", валюты: ЕЦБ на " + ddmm(fxAsOf) : ""));
+    } else parts.push("крипта: Binance");
+    $("#status").textContent = parts.join(" · ");
+  }
+
+  /* ---------- Отрисовка: список ---------- */
+  function renderList() {
+    let nL = 0, nS = 0, nStrong = 0;
+    const html = S.list.map((id) => {
+      const a = ensureAsset(id), st = statusOf(a), ser = a.ser[S.mode];
+      let price = "", chg = "", foot = "", chip;
+      if (st.code) chip = `<span class="chip v-${st.code}">${CODE_LABEL[st.code]}</span>`;
+      else {
+        const d = st.d;
+        if (d.side === "L") nL++; else nS++;
+        if (d.strong) nStrong++;
+        chip = `<span class="chip ${dirCls(d.side)} ${d.strong ? "strong" : "weak"}">${dirWord(d.side)}</span>`;
+        foot = `<span>шанс <span class="num">${pp(d.p)}</span> · нужно <span class="num">${pp(d.be)}</span></span>${d.strong ? '<span class="sig">сильный</span>' : ""}`;
+      }
+      if (noHourly(a)) foot = "<span>только дневные данные</span>";
+      else if (ser) {
+        const c = ser.c, N = c.length;
+        price = fmtPrice(c[N - 1], a.def.kind);
+        if (N > 1) { const dd = c[N - 1] / c[N - 2] - 1; chg = `<small class="${dd > 0 ? "up" : dd < 0 ? "down" : ""}">${spct(dd, 2)} за ${S.mode === "h" ? "час" : "день"}</small>`; }
+        if (st.code === "NA") foot = "<span>мало истории для оценки</span>";
+      } else if (a.err[S.mode]) foot = `<span>${esc(a.err[S.mode])}</span>`;
+      else if (a.def.kind === "peg") foot = "<span>курс зафиксирован</span>";
+      else if (a.def.kind === "na") foot = "<span>нет данных для расчёта</span>";
+      else foot = '<span class="skel" style="width:60%"></span>';
+      return `<li class="item">
+        <button class="row" type="button" data-id="${esc(id)}" aria-current="${id === S.selected}">
+          <span class="row-name"><b>${esc(a.def.title)}</b><small>${esc(a.def.sub || "")}</small></span>
+          <span class="row-price"><b class="num">${price}</b>${chg}</span>
+          <span class="row-foot">${chip}${foot}</span>
+        </button>
+        <button class="rm" type="button" data-rm="${esc(id)}" aria-label="Убрать ${esc(a.def.title)} из списка" title="Убрать из списка">×</button>
+      </li>`;
+    }).join("");
+    $("#list").innerHTML = html;
+    $("#tally").innerHTML = `<span class="chip v-BUY">Покупать: ${nL}</span><span class="chip v-SELL">Продавать: ${nS}</span><span class="chip v-NA">Сильных: ${nStrong}</span>`;
+  }
+
+  /* ---------- Отрисовка: карточка ордера ---------- */
+  function ticketShell(a) {
+    return `<section class="ticket" aria-label="Ордер">
+      <div class="t-head"><h3 class="section-title">Ордер</h3><span class="small muted" id="live-time"></span></div>
+      <div class="t-inputs">
+        <label for="dep">Депозит${a.def.kind === "crypto" ? ", USDT" : ""}<input id="dep" type="number" inputmode="decimal" min="1" step="1" value="${S.dep}"></label>
+        <label for="risk">Риск, % депозита<input id="risk" type="number" inputmode="decimal" min="0.1" max="20" step="0.1" value="${S.risk}"></label>
+        <label for="lev">Плечо, x<input id="lev" type="number" inputmode="decimal" min="1" max="125" step="1" value="${S.lev}"></label>
+      </div>
+      <div id="t-body"></div>
+    </section>`;
+  }
+  function row(label, value, copy, cls = "") {
+    return `<div class="t-row ${cls}"><dt>${label}</dt><dd><span class="num">${value}</span>${copy !== undefined && copy !== "" ? `<button type="button" class="copy" data-copy="${esc(copy)}" aria-label="Скопировать: ${esc(label)}" title="Скопировать"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>` : ""}</dd></div>`;
+  }
+  function renderTicket() {
+    const body = $("#t-body");
+    if (!body) return;
+    const a = S.assets.get(S.selected), st = a && statusOf(a);
+    if (!st || st.code) return;
+    const r = st.r, d = st.d, s = a.ser[S.mode], kind = a.def.kind, H = r.H;
+    const L = d.side === "L";
+    const entry = livePrice(a);
+    const dep = Math.max(1, +S.dep || 100), risk = Math.max(0.1, Math.min(20, +S.risk || 1)) / 100, lev = Math.max(1, Math.min(125, +S.lev || 1));
+    const tick = (a.rules && a.rules.tick) || 0, step = (a.rules && a.rules.step) || 0;
+    const isUsdt0 = kind === "crypto" && a.def.quote === "USDT";
+    const mult0 = isUsdt0 && BYBIT_1000[a.def.base] ? 1000 : 1;
+    const pDec = kind === "crypto" ? Math.max(0, Math.min(10, Math.max(tick ? decFromStep(tick * mult0) : 0, Math.ceil(-Math.log10(entry * mult0 * 1e-4))))) : 4;
+    const pStep = 10 ** -pDec / mult0;
+    const tpRaw = L ? entry * (1 + r.tp) : entry * (1 - r.sl), slRaw = L ? entry * (1 - r.sl) : entry * (1 + r.tp);
+    const tp = kind === "crypto" ? roundTo(tpRaw, pStep) : tpRaw, sl = kind === "crypto" ? roundTo(slRaw, pStep) : slRaw;
+    const dTP = Math.abs(tp / entry - 1), dSL = Math.abs(sl / entry - 1), fee = s.fee;
+    const value = dep * risk / (dSL + fee);
+    const margin = value / lev, needLev = value / dep;
+    const liq = lev > 1 ? (L ? entry * (1 - 1 / lev + Engine.MMR) : entry * (1 + 1 / lev - Engine.MMR)) : null;
+    const liqDist = lev > 1 ? 1 / lev - Engine.MMR : null;
+    const winUsd = value * (dTP - fee), lossUsd = value * (dSL + fee);
+    const closeAt = new Date(Date.now() + H * M().ms);
+    // Контракт на Bybit
+    const mult = mult0;
+    const contract = isUsdt0 ? (BYBIT_1000[a.def.base] || a.def.base + "USDT") : null;
+    const P = (v) => (kind === "crypto" ? nf(pDec).format(v * mult) : fmtPrice(v, kind));
+    const qty = value / entry / mult;
+    // Количество для справки: у Bybit свой шаг лота, главное поле — сумма ордера в USDT
+    const qDec = mult > 1 ? 0 : Math.max(0, Math.min(8, 3 - Math.floor(Math.log10(Math.max(qty, 1e-12)))));
+    const qtyR = Math.floor(qty * 10 ** qDec) / 10 ** qDec;
+    const out = [];
+    if (kind !== "crypto") {
+      out.push(row("Направление", L ? `Покупать ${a.def.base} за ${a.def.quote}` : `Продавать ${a.def.base} за ${a.def.quote}`, "", L ? "t-buy" : "t-sell"));
+      out.push(row("Цена входа", P(entry)));
+      out.push(row("Take Profit", `${P(tp)} (${spct(L ? dTP : -dTP, 2)})`, "", "t-buy"));
+      out.push(row("Stop Loss", `${P(sl)} (${spct(L ? -dSL : dSL, 2)})`, "", "t-sell"));
+      out.push(row("Размер позиции", `${nf(0).format(value / dep * 100)}% депозита`));
+      out.push(row("Таймфрейм", M().candle));
+      out.push(row("Срок сделки", span(H)));
+      out.push(row("Закрыть до", closeLabel(closeAt)));
+      const warnsFx = d.strong ? [] : [`Слабый сигнал: шанс ${pp(d.p)} при безубытке ${pp(d.be)}.`];
+      body.innerHTML = `${warnsFx.length ? `<div class="t-warns">${warnsFx.map((w) => `<p>${esc(w)}</p>`).join("")}</div>` : ""}<dl class="t-grid">${out.join("")}</dl>
+        <p class="small muted">Курс ЕЦБ обновляется раз в день, у брокера или в обменнике цена будет другой. Размер посчитан так, чтобы стоп стоил ${pct(risk, 1)} депозита.</p>`;
+      return;
+    }
+    if (contract) out.push(row("Контракт", contract, contract));
+    out.push(row("Направление", L ? "Buy · Long" : "Sell · Short", "", L ? "t-buy" : "t-sell"));
+    out.push(row("Тип ордера", "Market"));
+    out.push(row("Цена входа", P(entry), kind === "crypto" ? plain(entry * mult, pDec) : ""));
+    out.push(row("Сумма ордера", usd(value), plain(value, 2)));
+    out.push(row("Количество", `${nf(qDec).format(qtyR)} ${mult > 1 ? "×1000 " + a.def.base : a.def.base || ""}`, plain(qtyR, qDec)));
+    out.push(row("Плечо", nf(lev % 1 ? 1 : 0).format(lev) + "x"));
+    out.push(row("Маржа", usd(margin)));
+    out.push(row("Take Profit", `${P(tp)} (${spct(L ? dTP : -dTP, 2)})`, kind === "crypto" ? plain(tp * mult, pDec) : "", "t-buy"));
+    out.push(row("Stop Loss", `${P(sl)} (${spct(L ? -dSL : dSL, 2)})`, kind === "crypto" ? plain(sl * mult, pDec) : "", "t-sell"));
+    out.push(row("Таймфрейм", M().candle));
+    out.push(row("Срок сделки", span(H)));
+    out.push(row("Закрыть до", closeLabel(closeAt)));
+    if (liq !== null) out.push(row("Ликвидация ≈", `${P(liq)} (${spct(L ? -liqDist : liqDist)})`));
+    out.push(row("Если сработает TP", `<span class="up">+${usd(winUsd)}</span>`));
+    out.push(row("Если сработает SL", `<span class="down">−${usd(lossUsd)}</span>`));
+    const warns = [];
+    if (!d.strong) warns.push(d.edge < -0.02
+      ? `Слабый сигнал: шанс ${pp(d.p)} при безубытке ${pp(d.be)}. По статистике такие сделки в среднем убыточны.`
+      : `Слабый сигнал: шанс ${pp(d.p)} при безубытке ${pp(d.be)} — почти монетка.`);
+    if (margin > dep) warns.push(`Не хватает депозита: при плече ${nf(0).format(lev)}x нужно ${usd(margin)} маржи. Минимальное плечо для такого риска — ${nf(1).format(Math.ceil(needLev * 10) / 10)}x.`);
+    if (liq !== null && liqDist <= dSL) warns.push(`Ликвидация (${spct(L ? -liqDist : liqDist)}) ближе стопа: биржа закроет позицию раньше, чем сработает стоп, и заберёт всю маржу. Уменьши плечо.`);
+    if (a.news && a.news.items && a.news.items.some((x) => x.flag === "risk")) warns.push("В свежих новостях есть тревожные заголовки — посмотри блок «Новостной фон» ниже.");
+    body.innerHTML = `${warns.length ? `<div class="t-warns">${warns.map((w) => `<p>${esc(w)}</p>`).join("")}</div>` : ""}
+      <dl class="t-grid">${out.join("")}</dl>
+      <p class="small muted">Если к времени «Закрыть до» не сработали ни TP, ни SL — закрыть по рынку. Сумма ордера посчитана так, чтобы при срабатывании стопа потерять ${pct(risk, 1)} депозита с учётом комиссии Bybit (0,055% за вход и выход). Цены — с Binance; на Bybit они могут отличаться на доли процента, сверь вход перед отправкой. Количество дано для справки: на Bybit проще ввести ордер по сумме в USDT, а количество биржа округлит до своего шага. ${mult > 1 ? "На Bybit этот фьючерс считается в тысячах монет, поэтому цены выше умножены на 1000. " : ""}${L ? "" : "Если монета просто лежит у тебя на споте, «Продавать» значит продать её."}</p>`;
+  }
+
+  /* ---------- Отрисовка: показания ---------- */
+  function strip(side, r) {
+    const e = r.now, L = side === "L";
+    const p = e["p" + side], lo = e["lo" + side], hi = e["hi" + side], base = e["pb" + side], be = e["be" + side];
+    const label = L ? `Покупка: цена дойдёт до ${spct(r.tp, 2)} раньше, чем до ${spct(-r.sl, 2)}` : `Продажа: цена упадёт до ${spct(-r.sl, 2)} раньше, чем вырастет до ${spct(r.tp, 2)}`;
+    const P = (x) => (Math.max(0, Math.min(1, x)) * 100).toFixed(2) + "%";
+    return `<div class="${side}">
+      <div class="strip-head"><span>${label}</span><b>${pp(p)}</b></div>
+      <div class="track" role="img" aria-label="${esc(label)}: ${pp(p)}, разброс ${pp(lo)}–${pp(hi)}, обычно ${pp(base)}, безубыток ${pp(be)}, порог 80%">
+        <span class="ci" style="left:${P(lo)};width:${P(hi - lo)}"></span>
+        <span class="mk base" style="left:${P(base)}"></span>
+        <span class="mk be" style="left:${P(be)}"></span>
+        <span class="mk thr" style="left:80%"></span>
+        <span class="dot" style="left:${P(p)}"></span>
+      </div>
+      <div class="scale"><span>0%</span><span>50%</span><span>100%</span></div>
+    </div>`;
+  }
+
+  function trustBlock(a, r) {
+    const t = r.track;
+    if (!t.days) return `<div class="trust"><h3 class="section-title">Проверка на истории</h3><p class="muted">Истории пока мало, проверить модель не на чем.</p></div>`;
+    const sk = t.skill;
+    const skillTxt = sk > 0.002 ? `Точнее простой частоты на ${pct(sk)}` : sk < -0.002 ? `Хуже простой частоты на ${pct(-sk)}` : "Не точнее простой частоты";
+    const skillCls = sk > 0.002 ? "good" : sk < -0.002 ? "bad" : "";
+    const names = ["меньше 45%", "45–55%", "55–65%", "65–80%", "80% и выше"];
+    const rows = t.bins.map((b, k) => b.n ? `<tr><td>${names[k]}</td><td><div class="bar"><span style="width:${(b.hit / b.n * 100).toFixed(1)}%"></span><em style="left:${(b.sumP / b.n * 100).toFixed(1)}%"></em></div></td><td class="num">${pp(b.hit / b.n)}</td><td class="num">${b.n}</td></tr>` : "").join("");
+    const sigLine = (s) => s.n ? `${span(s.n)}, в плюс ${pp(s.hit)}, в среднем ${spct(s.avg, 2)} за сделку` : "не было";
+    return `<div class="trust">
+      <h3 class="section-title">Можно ли верить: проверка на истории</h3>
+      <p class="small muted" style="margin:0;max-width:80ch">Последние ${span(t.days)} модель на каждую свечу давала прогноз, глядя только на прошлое, а потом мы сверили его с тем, что случилось на самом деле. Простая частота — это «как часто так бывало вообще», без учёта текущей ситуации.</p>
+      <div class="trust-grid">
+        <div>
+          <div class="skill ${skillCls}">${skillTxt}</div>
+          <table class="calib" aria-label="Насколько сбывались прогнозы модели">
+            <thead><tr><th>Модель говорила</th><th>Сбылось на деле</th><th></th><th class="num">Прогнозов</th></tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+          <p class="calib-note">Столбик — как часто сбывалось, черта — что модель в среднем обещала.</p>
+        </div>
+        <ul class="facts">
+          <li><span>Прогнозов 80% и выше</span><span class="num">${t.n80 ? `${t.n80}, сбылось ${pp(t.hit80 / t.n80)}` : "0"}</span></li>
+          <li><span>Сильных сигналов на покупку</span><span>${sigLine(t.buy)}</span></li>
+          <li><span>Сильных сигналов на продажу</span><span>${sigLine(t.sell)}</span></li>
+          <li><span>Срок сделки</span><span>${span(r.H)}</span></li>
+        </ul>
+      </div>
+    </div>`;
+  }
+
+  function renderDetail() {
+    const box = $("#detail");
+    if (!S.list.length) { box.innerHTML = `<div class="empty">Список пуст. Впиши монету в поле слева и нажми «Проверить».</div>`; return; }
+    if (!S.list.includes(S.selected)) S.selected = S.list[0];
+    const a = ensureAsset(S.selected), st = statusOf(a), def = a.def, H = curH();
+    const head = (priceHtml, stamp) => `<button type="button" class="m-back" data-back><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>Все монеты</button><div class="r-head">
+        <div class="r-title"><h2>${esc(def.title)}<span>${esc(def.sub || "")}</span></h2>${priceHtml}</div>${stamp}</div>`;
+    const codeStamp = (code, sub) => `<div class="stamp v-${code}">${CODE_LABEL[code].toUpperCase()}<small>${sub}</small></div>`;
+    if (def.kind === "peg" || def.kind === "na") { box.innerHTML = head("", codeStamp(st.code, def.kind === "peg" ? "курс фиксирован" : "нет данных")) + `<p class="summary">${esc(def.msg)}</p>`; return; }
+    if (noHourly(a)) { box.innerHTML = head("", codeStamp("NA", "нет часовых данных")) + `<p class="summary">Для валют есть только дневные курсы ЕЦБ, часовых свечей в открытом доступе нет. Переключись на режим «Дни» вверху.</p>`; return; }
+    const s = a.ser[S.mode];
+    if (a.err[S.mode] && !s) { box.innerHTML = head("", codeStamp("ERR", "не загрузилось")) + `<p class="summary">${esc(a.err[S.mode])}</p>`; return; }
+    if (!s) { box.innerHTML = head("", codeStamp("LOAD", "загружаю")) + `<div class="skel" style="height:220px"></div>`; return; }
+    const N = s.c.length, chg = N > 1 ? s.c[N - 1] / s.c[N - 2] - 1 : 0;
+    const asOf = s.src === "ЕЦБ" ? `курс ЕЦБ на ${ddmm(s.asOf)}` : `за ${S.mode === "h" ? "час" : "день"}`;
+    const priceHtml = `<div class="r-price"><span class="num" id="live-price">${fmtPrice(a.live && Date.now() - a.live.at < 60000 ? a.live.price : s.c[N - 1], def.kind)}</span><small class="${chg > 0 ? "up" : chg < 0 ? "down" : ""}">${spct(chg, 2)}</small><small>${asOf}</small></div>`;
+    if (st.code === "NA") { box.innerHTML = head(priceHtml, codeStamp("NA", "мало истории")) + `<p class="summary">Истории слишком мало: ${span(N)} торгов. Чтобы найти похожие ситуации в прошлом, нужно хотя бы ${span(250 + H)}. Для совсем новых монет честную вероятность посчитать нельзя.</p>`; return; }
+    const r = st.r, d = st.d;
+    const stamp = `<div class="stamp ${dirCls(d.side)} ${d.strong ? "strong" : "weak"}">${dirWord(d.side).toUpperCase()}<small>шанс ${pp(d.p)} · нужно ${pp(d.be)}</small><small>${d.strong ? "сильный сигнал" : "слабый сигнал"} · на ${span(H)}</small></div>`;
+    const best = Math.max(r.now.pL, r.now.pS);
+    const gapTxt = best >= 0.8 ? "Шанс выше твоего порога 80%. Но посмотри на безубыток и средний итог: высокая вероятность ещё не значит выгоду." : `До твоего порога 80% не хватает ${Math.round((0.8 - best) * 100)} п.п. Для рынка это нормально: честная оценка редко уходит далеко от 50%.`;
+    box.innerHTML = head(priceHtml, stamp) + `
+      <p class="summary">${esc(summaryText(a, r, d))}</p>
+      ${a.stale[S.mode] ? `<p class="callout small">${esc(a.stale[S.mode])} Показываю прошлые данные.</p>` : ""}
+      ${ticketShell(a)}
+      <section aria-label="Вероятности">
+        <h3 class="section-title">Шанс, что сделка закроется в плюс</h3>
+        <div class="strips">${strip("L", r)}${strip("S", r)}
+          <div class="legend"><span><i class="lg-ci"></i>разброс оценки</span><span><i class="lg-base"></i>обычно бывает</span><span><i class="lg-be"></i>безубыток</span><span><i class="lg-thr"></i>твой порог 80%</span></div>
+          <p class="gap">${gapTxt}</p>
+        </div>
+      </section>
+      ${def.kind === "crypto" ? `<section class="news" aria-label="Новостной фон"><h3 class="section-title">Новостной фон</h3><div id="news"></div></section>` : ""}
+      <section class="chart-wrap" aria-label="График цены">
+        <h3 class="section-title">Цена за ${span(Math.min(N, 200))} и ${H % 10 === 1 && H % 100 !== 11 ? "следующий" : "следующие"} ${span(H)}</h3>
+        <svg class="chart" id="chart" role="img" aria-label="График цены со средними и уровнями тейка и стопа"></svg>
+        <div class="chart-legend"><span><i style="border-color:var(--ink)"></i>цена</span><span><i style="border-color:var(--accent)"></i>средняя 50</span><span><i style="border-color:var(--s200)"></i>средняя 200</span><span><i style="border-color:var(--buy);border-top-style:dashed"></i>уровень вверх</span><span><i style="border-color:var(--sell);border-top-style:dashed"></i>уровень вниз</span></div>
+      </section>
+      <section aria-label="Почему"><h3 class="section-title">Почему так</h3><ul class="why">${whyItems(a, r).map((x) => `<li class="${x.cls}"><span>${esc(x.text)}</span></li>`).join("")}</ul></section>
+      ${trustBlock(a, r)}`;
+    renderTicket();
+    renderNews();
+    drawChart();
+    if (def.kind === "crypto") loadNews(a);
+  }
+
+  /* ---------- График ---------- */
+  function niceTicks(min, max, count) {
+    const span0 = max - min;
+    if (!(span0 > 0)) { const o = [min]; o.step = 1; return o; }
+    const raw = span0 / count, mag = 10 ** Math.floor(Math.log10(raw)), err = raw / mag;
+    const step = (err >= 7.5 ? 10 : err >= 3.5 ? 5 : err >= 1.5 ? 2 : 1) * mag;
+    const out = [];
+    for (let k = Math.ceil(min / step); k * step <= max + step * 1e-9; k++) out.push(k * step);
+    out.step = step;
+    return out;
+  }
+  function drawChart() {
+    const svg = $("#chart");
+    if (!svg) return;
+    const a = S.assets.get(S.selected), s = a && a.ser[S.mode];
+    if (!s) return;
+    const r = resultFor(a), f = s.feat, k = a.def.kind;
+    const W = Math.max(300, Math.round(svg.getBoundingClientRect().width || 680)), HH = 240;
+    const padL = 6, padR = 78, padT = 12, padB = 24;
+    const N = s.c.length, show = Math.min(N, 200), start = N - show, total = show + r.H;
+    const X = (i) => padL + ((i - start) / (total - 1)) * (W - padL - padR);
+    const price = s.c[N - 1], tgt = price * (1 + r.tp), stp = price * (1 - r.sl);
+    let lo = Math.min(tgt, stp), hi = Math.max(tgt, stp);
+    for (let i = start; i < N; i++) {
+      for (const v of [s.c[i], f.sma50[i], f.sma200[i]]) if (Number.isFinite(v)) { if (v < lo) lo = v; if (v > hi) hi = v; }
+    }
+    const padV = (hi - lo) * 0.06; lo -= padV; hi += padV;
+    const Y = (v) => padT + ((hi - v) / (hi - lo)) * (HH - padT - padB);
+    const path = (arr) => { let d = "", pen = false; for (let i = start; i < N; i++) { const v = arr[i]; if (!Number.isFinite(v)) { pen = false; continue; } d += (pen ? "L" : "M") + X(i).toFixed(1) + " " + Y(v).toFixed(1); pen = true; } return d; };
+    const line = path(s.c);
+    const area = line + `L${X(N - 1).toFixed(1)} ${(HH - padB).toFixed(1)}L${X(start).toFixed(1)} ${(HH - padB).toFixed(1)}Z`;
+    const x0 = X(N - 1), x1 = X(N - 1 + r.H);
+    const tags = [{ v: tgt, cls: "t-buy", txt: spct(r.tp, 2) }, { v: stp, cls: "t-sell", txt: spct(-r.sl, 2) }, { v: price, cls: "t-ink", txt: fmtPrice(price, k) }];
+    const all = niceTicks(lo, hi, 5), dec = Math.max(0, Math.min(10, -Math.floor(Math.log10(all.step) + 1e-9)));
+    const ticks = all.filter((v) => tags.every((t) => Math.abs(Y(t.v) - Y(v)) > 12));
+    let out = "";
+    for (const v of ticks) out += `<line class="grid-l" x1="${padL}" x2="${W - padR}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}"/><text x="${W - padR + 8}" y="${(Y(v) + 4).toFixed(1)}">${nf(dec).format(v)}</text>`;
+    out += `<rect class="zone" x="${x0.toFixed(1)}" y="${padT}" width="${Math.max(2, x1 - x0).toFixed(1)}" height="${HH - padT - padB}"/>`;
+    out += `<line class="zone-edge" x1="${x0.toFixed(1)}" x2="${x0.toFixed(1)}" y1="${padT}" y2="${HH - padB}"/>`;
+    out += `<path class="area" d="${area}"/><path class="s200" d="${path(f.sma200)}"/><path class="s50" d="${path(f.sma50)}"/><path class="pl" d="${line}"/>`;
+    const xe = Math.max(x1, x0 + 8);
+    out += `<line class="tgt" x1="${x0.toFixed(1)}" x2="${xe.toFixed(1)}" y1="${Y(tgt).toFixed(1)}" y2="${Y(tgt).toFixed(1)}"/>`;
+    out += `<line class="stp" x1="${x0.toFixed(1)}" x2="${xe.toFixed(1)}" y1="${Y(stp).toFixed(1)}" y2="${Y(stp).toFixed(1)}"/>`;
+    out += `<circle class="last" cx="${x0.toFixed(1)}" cy="${Y(price).toFixed(1)}" r="4"/>`;
+    const placed = tags.map((t) => ({ ...t, y: Y(t.v) })).sort((p, q) => p.y - q.y);
+    for (let q = 1; q < placed.length; q++) if (placed[q].y - placed[q - 1].y < 15) placed[q].y = placed[q - 1].y + 15;
+    for (const t of placed) out += `<text class="${t.cls}" x="${W - padR + 8}" y="${(t.y + 4).toFixed(1)}">${t.txt}</text>`;
+    let lastX = -1e9;
+    for (let i = start + 1; i < N; i++) {
+      const d0 = new Date(s.t[i - 1]), d1 = new Date(s.t[i]);
+      let lab = null;
+      if (S.mode === "h") { if (d0.getDate() !== d1.getDate()) lab = d1.getDate() + " " + MONTHS[d1.getMonth()]; }
+      else if (d0.getUTCMonth() !== d1.getUTCMonth()) lab = d1.getUTCMonth() === 0 ? String(d1.getUTCFullYear()) : MONTHS[d1.getUTCMonth()];
+      if (!lab) continue;
+      const x = X(i);
+      if (x - lastX < 50 || x > W - padR - 20) continue;
+      out += `<text x="${x.toFixed(1)}" y="${HH - 6}" text-anchor="middle">${lab}</text>`;
+      lastX = x;
+    }
+    svg.setAttribute("viewBox", `0 0 ${W} ${HH}`);
+    svg.innerHTML = out;
+  }
+
+  function renderAll() { renderControls(); renderStatus(); renderList(); renderDetail(); startLive(); }
+
+  /* ---------- События ---------- */
+  function needsLoad() { return S.list.some((id) => { const a = ensureAsset(id); return !a.ser[S.mode] && !a.err[S.mode] && (a.def.kind === "crypto" || (a.def.kind === "fx" && S.mode === "d")); }); }
+  const isPhone = () => window.matchMedia("(max-width: 920px)").matches;
+  function openDetail(on) {
+    document.body.classList.toggle("m-detail", on);
+    if (isPhone()) window.scrollTo(0, 0);
+    if (on) drawChart();
+  }
+  function select(id) {
+    S.selected = id; persist(); renderList(); renderDetail(); startLive();
+    if (isPhone()) {
+      const h = "#" + encodeURIComponent(id);
+      if (location.hash !== h) location.hash = h; else openDetail(true);
+    }
+  }
+  window.addEventListener("hashchange", () => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (!id || !S.list.includes(id)) { openDetail(false); return; }
+    if (id !== S.selected) { S.selected = id; persist(); renderList(); renderDetail(); startLive(); }
+    openDetail(true);
+  });
+  async function copyText(btn) {
+    const v = btn.dataset.copy;
+    let ok = false;
+    try { await navigator.clipboard.writeText(v); ok = true; } catch (e) {
+      try { const t = document.createElement("textarea"); t.value = v; t.setAttribute("readonly", ""); t.style.position = "fixed"; t.style.opacity = "0"; document.body.appendChild(t); t.select(); ok = document.execCommand("copy"); t.remove(); } catch (e2) { ok = false; }
+    }
+    const icon = btn.innerHTML;
+    btn.textContent = ok ? "Готово" : v;
+    btn.classList.toggle("done", ok);
+    setTimeout(() => { btn.innerHTML = icon; btn.classList.remove("done"); }, 1600);
+  }
+  document.addEventListener("click", (ev) => {
+    const cp = ev.target.closest(".copy");
+    if (cp) { copyText(cp); return; }
+    if (ev.target.closest("[data-back]")) { if (location.hash) history.back(); else openDetail(false); return; }
+    const rm = ev.target.closest("[data-rm]");
+    if (rm) {
+      const id = rm.dataset.rm;
+      S.list = S.list.filter((x) => x !== id);
+      if (S.selected === id) S.selected = S.list[0] || "";
+      persist(); renderList(); renderDetail(); startLive();
+      return;
+    }
+    const rowEl = ev.target.closest(".row");
+    if (rowEl) { select(rowEl.dataset.id); return; }
+    const mb = ev.target.closest("[data-mode]");
+    if (mb) { S.mode = mb.dataset.mode; persist(); renderAll(); if (needsLoad()) refreshAll(); return; }
+    const h = ev.target.closest("[data-h]");
+    if (h) { if (S.mode === "h") S.Hh = +h.dataset.h; else S.Hd = +h.dataset.h; persist(); renderAll(); return; }
+    if (ev.target.closest("#refresh")) refreshAll();
+  });
+  document.addEventListener("input", (ev) => {
+    const v = parseFloat(String(ev.target.value).replace(",", "."));
+    if (ev.target.id === "lev" && v >= 1 && v <= 125) { S.lev = v; persist(); renderTicket(); }
+    if (ev.target.id === "risk" && v > 0 && v <= 20) { S.risk = v; persist(); renderTicket(); }
+    if (ev.target.id === "dep" && v > 0 && v < 1e9) { S.dep = v; persist(); renderTicket(); }
+  });
+  $("#add").addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    const inp = $("#add-input"), msg = $("#add-msg");
+    const def = parseAsset(inp.value);
+    msg.textContent = "";
+    if (!def) return;
+    if (def.error) { msg.textContent = def.error; return; }
+    if (!S.list.includes(def.id)) S.list.unshift(def.id);
+    inp.value = "";
+    const a = ensureAsset(def.id);
+    select(def.id);
+    if (!a.ser[S.mode]) { await loadOne(a, S.mode); renderList(); if (S.selected === a.id) { renderDetail(); startLive(); } }
+  });
+  let rz = null;
+  window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(drawChart, 120); });
+  document.addEventListener("visibilitychange", () => {
+    const up = S.updated[S.mode];
+    if (document.visibilityState === "visible" && up && Date.now() - up > M().refresh * 60 * 1000) refreshAll();
+  });
+  setInterval(() => {
+    const up = S.updated[S.mode];
+    if (document.visibilityState === "visible" && (!up || Date.now() - up >= M().refresh * 60 * 1000)) refreshAll();
+  }, 60 * 1000);
+
+  // Ярлык на экран «Домой» для Android (для iPhone — теги в <head>)
+  try {
+    const icon = document.querySelector('link[rel="apple-touch-icon"]');
+    const man = { name: "Барометр рынка", short_name: "Барометр", start_url: location.href.split("#")[0], display: "standalone", background_color: "#ECF0EE", theme_color: "#15211D", icons: icon ? [{ src: icon.href, sizes: "180x180", type: "image/png" }] : [] };
+    const link = document.createElement("link");
+    link.rel = "manifest"; link.href = "data:application/manifest+json;charset=utf-8," + encodeURIComponent(JSON.stringify(man));
+    document.head.appendChild(link);
+  } catch (e) { /* без ярлыка тоже работает */ }
+
+  const startId = decodeURIComponent(location.hash.slice(1));
+  if (startId && S.list.includes(startId)) S.selected = startId;
+  renderAll();
+  if (startId && S.list.includes(startId) && isPhone()) openDetail(true);
+  refreshAll();
+})();
+
+</script>
+</body>
+</html>
